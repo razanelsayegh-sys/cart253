@@ -6,7 +6,7 @@
 
 <h3> Razan Elsaygh </h3>
 
-![Completed CART 253 Projet 2 final project shown in its surrounding presentation space](Website/Image/projet final projet 2.jpeg)
+
 <img src="Image/projet final projet 2.jpeg" alt="Completed CART 253 Projet 2 final project shown in its surrounding presentation space">
 <space>
 <space>
