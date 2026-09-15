@@ -6,4 +6,4 @@
 
 <p>Here is a screenshot of my website: </p>
 
-![Website screenshot](./Image/Website%20screenshot.png)
+![Website screenshot](./Image/Website%20screenshot.png) 

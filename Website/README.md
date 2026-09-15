@@ -9,7 +9,7 @@
 <img src="Image/projet final projet 2.jpeg" width="1600" height="350">
 <br>
 <br>
-
 <p>The purpose of this website is to show all my coursework for CART 253, including my prototypes and reflections. It's a sapce where I will share my projects and reflect on how i grow and improve during the semester.</p>
 <br>
-Here is an link to my journal [Journal](Journal.md).
+
+Here is an link to my [Journal](Journal.md).
