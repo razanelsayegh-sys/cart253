@@ -11,7 +11,7 @@
  * Creates the canvas and sets up the initial state.
  */
 function setup() {
-    createCanvas(700,400);
+    createCanvas(400,400);
 
 }
 /**
@@ -27,18 +27,5 @@ function draw() {
  * Draw the window frame from the inside
  */
 function drawWindow(){
-// Dark blue background of the inside of the room
- background(50,55,100);
- // Draw the window frame
- push();
-    fill('white');
-    rect(100,70,500,250);
- pop();
 
-    //the window glass
- push();
-    noStroke();
-    fill('navy');
-    rect(120,90,460,210);
- pop();
 }

@@ -6,7 +6,7 @@ Razan Elsaygh
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+This prototypes is a simple representation of a night scene viewed through a window. I used diffrent shapes to excute this drawing such as a rectangles and ellipses. The goal is to explore basic shapes and layering. 
 
 ## Attribution
 
