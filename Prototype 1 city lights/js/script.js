@@ -12,6 +12,7 @@
  */
 function setup() {
     createCanvas(700,400);
+    canvas.centre();
 
 }
 /**
