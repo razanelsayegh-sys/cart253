@@ -1,24 +1,31 @@
 /**
- * Title of Project
- * Author Name
+ * City lights
+ * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * A window with a city skyline. 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+ * Creates the canvas and sets up the initial state.
+ */
 function setup() {
+    createCanvas(400,400);
 
 }
-
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
+ * Draw the window and the skyline
+ */
+
 function draw() {
+    drawWindow();
+    drawSkyline();
+
+}
+/**
+ * Draw the window frame from the inside
+ */
+function drawWindow(){
 
 }
