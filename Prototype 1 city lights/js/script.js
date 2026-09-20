@@ -22,6 +22,8 @@ function draw() {
     drawWindow();
     drawSkyline();
     drawlights();
+    drawmoon();
+    drawStars();
 
 }
 /**
@@ -130,5 +132,27 @@ function drawlights(){
     rect(460, 230, 10, 10);
     rect(500, 230, 10, 10);
     rect(500, 260, 10, 10);
+    pop();
+}
+function drawmoon(){
+    // Draw the moon
+    push();
+    fill('lightgray');
+    noStroke();
+    ellipse(520, 120, 20, 20);
+    pop();
+}
+function drawStars(){
+    // Draw the stars
+    push();
+    fill('white');
+    noStroke();
+    ellipse(150, 120, 5, 5);
+    ellipse(200, 105, 5, 5);
+    ellipse(250, 120, 5, 5);
+    ellipse(300, 100, 5, 5);
+    ellipse(350, 110, 5, 5);
+    ellipse(400, 115, 5, 5);
+    ellipse(450, 100, 5, 5);
     pop();
 }
