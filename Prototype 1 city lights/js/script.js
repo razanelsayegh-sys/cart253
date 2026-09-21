@@ -11,9 +11,7 @@
  * Creates the canvas and sets up the initial state.
  */
 function setup() {
-    createCanvas(700,400);
-    canvas.centre();
-
+   createCanvas(700,400);
 }
 /**
  * Draw the window and the skyline
