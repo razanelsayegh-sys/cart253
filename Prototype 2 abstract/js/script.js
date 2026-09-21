@@ -20,9 +20,11 @@ function setup() {
 */
 function draw() {
     drawbackground();
-    drawTriangle();
     drawCircle();
+    drawTriangle();
+    
 }
+
 
 /**
  * Drawing the background
@@ -33,8 +35,16 @@ function drawbackground() {
     pop();
 }
 /**
- * Drawing the background triangle
+ * Drawing the background circle with transparency
  */
+function drawCircle(){
+//First circle with transparency
+    push();
+    fill(255, 255, 200, 150);
+    noStroke();
+    ellipse(200, 200, 390, 390);
+    pop();
+}
 function drawTriangle(){
 // First triangle 
     push();
