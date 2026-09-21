@@ -40,7 +40,7 @@ function drawbackground() {
 function drawCircle(){
 //First circle with transparency
     push();
-    fill(255, 255, 200, 150);
+    fill(255, 255, 200, 70);
     noStroke();
     ellipse(200, 200, 390, 390);
     pop();
