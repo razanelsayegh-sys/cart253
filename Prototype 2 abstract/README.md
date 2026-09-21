@@ -6,7 +6,7 @@ Razan Elsaygh
 
 ## Description
 
-This prototype is an abstract composition made from random shapes and colors. The goal of this prototype is to experiment with diffrent modes like colorMode, transparency. 
+This prototype is an abstract composition made from random shapes and colors. The goal of this prototype is to experiment with diffrent modes like colorMode insde of writting the name of the color, transparency. 
 
 ## Attribution
 
