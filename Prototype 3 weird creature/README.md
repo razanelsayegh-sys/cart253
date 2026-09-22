@@ -6,7 +6,7 @@ Razan Elsaygh
 
 ## Description
 
-This prototype is a strange composition of a creature made from diffrente shapes and colors to make something playful and weird. 
+This prototype is a strange composition of a creature made from diffrente shapes and colors to make something playful and weird.In this prototype I used new elements such as the erase where a circle is transparent from the middel. 
 
 ## Attribution
 
