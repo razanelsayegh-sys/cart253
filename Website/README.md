@@ -34,5 +34,3 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype%203%20weird%20creature/">View this project online</a>
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 3 weird creature/js/script.js">View the script of this project</a>
-
-![Aniamtion example](./Image/Animation%20example.png) 
