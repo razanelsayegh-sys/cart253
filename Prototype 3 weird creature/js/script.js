@@ -30,7 +30,33 @@ function draw() {
  * Drawing the base of thecreature
  */
 function drawCreature() {
-  fill(255, 0, 0);
-  ellipse(250, 250, 200, 200);
-  
+//Drawing the first part of the creature's face
+push();
+  fill("lightgreen");
+  noStroke();
+  ellipse(250, 250, 200, 225);
+pop();
+
+//Drawing the bottom half of the creature's face
+push();
+  fill("lightgreen");
+  noStroke();
+  ellipse(250, 400, 300, 200);
+pop();
+
+//Drawing the ears of the creature
+push();
+  fill("lightgreen");
+  noStroke();
+  ellipse(100, 300, 50, 50);
+  ellipse(400, 300, 50, 50);
+pop();
+
+//Drawing the stroke that connects the ears to the face
+push();
+  stroke("lightgreen");
+  strokeWeight(10);
+  line(100, 300, 250, 350);
+  line(400, 300, 250, 350);
+pop();
 }
