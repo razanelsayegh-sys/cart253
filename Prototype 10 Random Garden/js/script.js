@@ -1,9 +1,9 @@
 /**
- * Colorful Garden
+ * Magical Garden
  * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * A drawing of a colorful garden with flowers that appears randomly on the canvas.
+ * The flowers flowers are drawn with diffrent sizes and colors, to add depth and make it more magical.
  */
 
 "use strict";
