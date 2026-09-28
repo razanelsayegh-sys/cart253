@@ -1,4 +1,4 @@
-# Magical Garden
+# The Magical Garden
 
 Razan Elsaygh
 
@@ -6,14 +6,14 @@ Razan Elsaygh
 
 ## Description
 
-It's a field of flowers that appears randomly every time the refresh button is clicked. 
+It's a field at night where stars appear randomly in the garden each time the refresh button is clicked. 
 
 ## Attribution
 
 This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
-> - This project is inspired by the example shown in class by the teacher called [Random Artist](https://editor.p5js.org/pippinbarr/sketches/Jmy-sBtTS)
+> 
 
 ## License
 
