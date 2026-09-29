@@ -29,7 +29,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <h5> The Shower </h5>
 <img src="Image/The Shower.png" > 
 
-<a href="https://razanelsayegh-sys.github.io/cart253/Prototype%2020%20Drawing%20canvas/>View this project online">View this project online</a>
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype%2020%20Drawing%20canvas/">View this project online</a>
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 20 Drawing canvas/js/script.js">View the script of this project</a>
 
