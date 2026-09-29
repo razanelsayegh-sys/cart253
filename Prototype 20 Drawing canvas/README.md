@@ -13,6 +13,7 @@ This prototype is an interactive shower drawing that reacts to mouse movement. M
 This bit should attribute any code, assets or other elements used taken from other sources. 
 
 > - This project uses [p5.js](https://p5js.org).
+> - This project is inpisred by the teachers example " PaintShop Amateur"[the example](https://editor.p5js.org/pippinbarr/sketches/qbE1XVdDg).
 
 
 ## License
