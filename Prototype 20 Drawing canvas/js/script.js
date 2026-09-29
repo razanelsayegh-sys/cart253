@@ -72,6 +72,12 @@ fill("orange");
 ellipse(250, 820, 680, 240);
 pop();
 
+push(); 
+fill("#fcc859c6");
+noStroke();
+ellipse(250, 899, 680, 240);
+pop();
+
 push();
 strokeWeight(100);
 stroke("lightgrey");
