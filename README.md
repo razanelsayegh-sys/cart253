@@ -14,9 +14,35 @@
 
 Here is a link to my <a href="Journal.md">Journal</a>.
 
+<h3> New </h3>
+<h4> Animated Moments </h4>
+<p> Projects of septembre 29, 2026</p>
+
+<h5> The Magic Garden </h5>
+<img src="Image/The Magic Garden.png" > 
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype%2010%20Random%20Garden/">View this project online</a>
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 10 Random Garden/js/script.js">View the script of this project</a>
+
+
+<h5> The Shower </h5>
+<img src="Image/The Shower.png" > 
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype%2020%20Drawing%20canvas/>View this project online</a>
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 20 Drawing canvas/js/script.js">View the script of this project</a>
+
+<h5> Melting in the sun </h5>
+<img src="Image/Melting in the sun.png" > 
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype%2030%20melting%20shapes/"</a>
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 30 melting shapes/js/script.js">View the script of this project</a>
+
 
 <h4>Drawing Prototypes </h4>
-<p> Here is my new projects (22 sept)</p>
+<p> Projects of septembre 22, 2026</p>
 
 <h5> Prototype 1: City Lights </h5>
 <img src="Image/City lights.png" >
