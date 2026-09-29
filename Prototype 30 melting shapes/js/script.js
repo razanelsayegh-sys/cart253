@@ -1,18 +1,18 @@
 /**
- * Title of Project
- * Author Name
+ * Melting in the sun
+ * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Drawing a melting ice cream in a frame
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Drawing the canvas and background
 */
 function setup() {
-
+createCanvas(500,700);
+background("#ffbb77f8");
 }
 
 
