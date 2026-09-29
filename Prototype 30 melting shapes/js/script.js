@@ -11,6 +11,7 @@ let drips = [];
 let colors =["#f96b9a","#81f4a5", "#e2fb65" ];
 let meltSpeed = 0.03;
 let scoopSize = 70;
+let dripTimer = 0;
 
 /**
  * Drawing the canvas and background
@@ -68,9 +69,10 @@ ellipse(250,245,scoopSize,scoopSize);
 pop();
 
 // the melting animation effect
-//Pink drops
 push();
-if(frameCount %150 === 0){   //The amount of drips
+ //The amount of drips
+ dripTimer =(dripTimer + 1)%150;
+if(dripTimer === 0){
     drips.push({
         x: random(220,280),
         y:300,
