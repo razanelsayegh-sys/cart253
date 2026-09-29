@@ -124,7 +124,7 @@ pop();
  * The interactive part of the drawing
  */
 
-// Mouse moves DOWN- Water drops
+// Mouse moves DOWN for the water drops
 if(mouseY > pmouseY){
     bubbles = [];
     drops.push({x: mouseX, y: mouseY });
@@ -137,7 +137,7 @@ for(let d of drops){
     d.y +=3; 
 }
 
-//Mouse moves UP- Bubbles
+//Mouse moves UP for the bubbles
 if(mouseY < pmouseY) {
    drops = [];
    bubbles.push({x: mouseX, y: mouseY});
