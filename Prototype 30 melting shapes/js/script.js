@@ -26,11 +26,11 @@ background("#ffbb77f8");
 */
 function draw() {
 
-background("#ffbb77f8");
+background("#ffae5d");
 
 // Drawing the frame
 push ();
-fill ("#7795fff8");
+fill ("#6a88f4");
 noStroke();
 rect(80, 115, 340, 440);
 pop ()
@@ -48,21 +48,21 @@ pop()
 
 // Ice cream scoop on the left
 push();
-fill("#ff80ab");
+fill("#ff4c87");
 noStroke();
 ellipse(220,300,scoopSize,scoopSize);
 pop();
 
 // scoop on the right
 push();
-fill("#b1f8c7");
+fill("#85ffac");
 noStroke();
 ellipse(280,300,scoopSize,scoopSize);
 pop();
 
 //scoop on the top
 push();
-fill("#eaff80");
+fill("#e2fc5c");
 noStroke();
 ellipse(250,245,scoopSize,scoopSize);
 pop();
