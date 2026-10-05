@@ -14,8 +14,8 @@
 // Condition added to make the image change colors when the mouse is over the jellyfish image.
 const Jellyfish = {
     x: 200,
-    y: 200,
-    size: 100,
+    y: 400,
+    size: 300,
     fill: "#ff0000", // red to start
     fills: {
         noOverlap: "#ff0000", // red for no overlap
@@ -31,18 +31,39 @@ const userMouse = {
     fill: "#000000"
 };
 
-// Adding the jellifish image to the canvas
-let jellyfishImage;
+// Adding the jellifish image to the canvas(part1)
+let jellyfishImage1 = {
+    //position of the image on the canvas
+    x: 200,
+    y: 230,
+    size: 350,
 
-function preload() {
-    jellyfishImage = loadImage("assets/images/jellyfish.png");
+    //The image of the jellyfish will be loaded in the preload function below
+    image2: undefined
+};
+
+let jellyfishImage2 = {
+    //position of the image on the canvas
+    x: 300,
+    y: 330,
+    size: 650,
+
+    //The image of the jellyfish will be loaded in the preload function below
+    image2: undefined
+};
+
+async function preload() {
+    //Loading the jellyfish image to the canvas
+    jellyfishImage1.image2 = await loadImage("assets/images/jellyfish1.png");
+    jellyfishImage2.image2 = await loadImage("assets/images/jellyfish2.png");
 }
 
 /**
  * Creating canvas 
 */
-function setup() {
-    CreateCanvas(800, 600);
+async function setup() {
+    createCanvas(600, 700);
+    await preload();
 }
 
 
@@ -53,7 +74,10 @@ function draw() {
     // Set the background color
     background("lightblue");
 
-    //Adding the jellyfish image to the canvas
-    image(jellyfishImage, Jellyfish.x, Jellyfish.y, Jellyfish.size, Jellyfish.size);
-
+    //Adding the jellyfish images to the canvas
+    push();
+    imageMode(CENTER);
+    image(jellyfishImage1.image2, jellyfishImage1.x, jellyfishImage1.y, jellyfishImage1.size, jellyfishImage1.size);
+    image(jellyfishImage2.image2, jellyfishImage2.x, jellyfishImage2.y, jellyfishImage2.size, jellyfishImage2.size);
+    pop();
 }
