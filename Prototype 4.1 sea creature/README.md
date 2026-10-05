@@ -16,6 +16,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 > - This project is inspired by the example shown in class called the "Overlapping Circles" : https://editor.p5js.org/pippinbarr/sketches/NLnxtLMat 
 > - This project uses an image of a "Jellyfish" which is a drawing done by me.
 > - To load the image of the jellyfish, i used the file left by the professor:https://pippinbarr.com/cart253/topics/extras/images.html 
+> - To creat transparency to the photo i used a refrence from the p5.js website: https://editor.p5js.org/p5/sketches/Image:_Transparency 
 
 ## License
 
