@@ -18,7 +18,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 > - To load the image of the jellyfish, i used the file left by the professor:https://pippinbarr.com/cart253/topics/extras/images.html 
 > - To creat transparency to the photo i used a refrence from the p5.js website: https://editor.p5js.org/p5/sketches/Image:_Transparency 
 
-## License
 
+## License
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
