@@ -4,8 +4,10 @@
  * 
  * This is a simple sketch of a 
  * jellyfish on the canvas. The jellyfish 
- * is an image drawn by me, in this drawing the lellyfish willl change
- * colors where depending on where the mouse is on the canvas.
+ * is an image drawn by me, in this drawing the jellyfish will change
+ * colors depending on where the mouse is on the canvas. This drawing symbolizes
+ * the memories that are being replaced by new ones, and the jellyfish is a 
+ * symbol of the new memorie that is replacing the old ones.
  * 
  */
 
@@ -87,7 +89,37 @@ async function setup() {
 */
 function draw() {
     // Set the background color
-    background("lightblue");
+    background(180, 200, 230);
+
+    //Drawing background making it look like memories that are replacing another ones.
+    //adding shapes that will make to make it look like old photos
+    push();
+    noStroke();
+    fill("#36b0f18e");
+    rect(200, 150, 250, 350);
+    fill("#337ca4");
+    rect(100, 400, 150, 150);
+    pop();
+
+    push();
+    noStroke();
+    fill("#3674f185");
+    ellipse(430, 500, 190, 190);
+    pop();
+
+    push();
+    noStroke();
+    fill("#d1e4ef55");
+    ellipse(160, 150, 200, 200);
+    pop();
+
+    // Adding a frame to the canvas to make it look like a photo frame
+    push();
+    noFill();
+    stroke("#f3bb55");
+    strokeWeight(10);
+    rect(0, 0, width, height);
+    pop();
 
     // Update the userMouse position based on the current position of the mouse
     userMouse.x = mouseX;
@@ -121,5 +153,6 @@ function draw() {
     fill(userMouse.fill);
     ellipse(userMouse.x, userMouse.y, userMouse.size);
     pop();
+
 
 }
