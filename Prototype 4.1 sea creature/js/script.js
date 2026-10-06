@@ -13,7 +13,7 @@
 
 "use strict";
 
-// Condition added to make the image change colors when the mouse is over the jellyfish image.
+// Condition added to make the image change when the mouse is over the jellyfish image.
 const Jellyfish = {
     x: 200,
     y: 400,

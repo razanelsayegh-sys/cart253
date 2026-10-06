@@ -8,11 +8,64 @@
 
 "use strict";
 
+
+// Adding the seaweedimages to the canvas
+let seaweedImage1 = {
+    //position of the image on the canvas
+    x: 150,
+    y: 270,
+    size: 330,
+    //Velocity of the seaweed moves horizontally to the right
+    velocity: {
+        x: 1.5,
+        y: 0
+    },
+    //The image of the seaweed will be loaded in the preload function below
+    image: undefined,
+};
+
+let seaweedImage2 = {
+    //position of the image on the canvas
+    x: 300,
+    y: 430,
+    size: 450,
+    //Velocity of the seaweed moves horizontally to the right
+    velocity: {
+        x: 1,
+        y: 0
+    },
+    //The image of the seaweed will be loaded in the preload function below
+    image: undefined
+};
+
+let seaweedImage3 = {
+    //position of the image on the canvas
+    x: 490,
+    y: 620,
+    size: 450,
+    //Velocity of the seaweed moves horizontally to the right
+    velocity: {
+        x: 2,
+        y: 0
+    },
+    //The image of the seaweed will be loaded in the preload function below
+    image: undefined
+};
+
+async function preload() {
+    //Loading the seaweed image to the canvas
+    seaweedImage1.image = await loadImage("assets/images/Seaweed1.png");
+    seaweedImage2.image = await loadImage("assets/images/Seaweed2.png");
+    seaweedImage3.image = await loadImage("assets/images/Seaweed3.png");
+}
+
 /**
- * Creating the canvas
+ * Creating canvas 
 */
-function setup() {
-    createCanvas(500, 600);
+async function setup() {
+    createCanvas(600, 700);
+
+    await preload();
 }
 
 
@@ -22,4 +75,54 @@ function setup() {
 function draw() {
     background("#ceb979");
 
+    //Calling the functions to move, wrap and draw the seaweed images
+    moveSeaweed(seaweedImage1);
+    moveSeaweed(seaweedImage2);
+    moveSeaweed(seaweedImage3);
+
+    wrapSeaweed(seaweedImage1);
+    wrapSeaweed(seaweedImage2);
+    wrapSeaweed(seaweedImage3);
+
+    drawSeaweed(seaweedImage1);
+    drawSeaweed(seaweedImage2);
+    drawSeaweed(seaweedImage3);
 }
+//Draws the seaweed images on the canvas
+function drawSeaweed(seaweed) {
+    image(seaweed.image, seaweed.x, seaweed.y, seaweed.size, seaweed.size);
+}
+//Moves the seaweed images across the canvas
+function moveSeaweed(seaweed) {
+    seaweed.x += seaweed.velocity.x / 2;
+    seaweed.y += seaweed.velocity.y / 2;
+}
+
+//Wraps the seaweed images around the canvas
+function wrapSeaweed(seaweed) {
+    if (seaweed.x > width) {
+        seaweed.x = 0;
+    } else if (seaweed.x < 0) {
+        seaweed.x = width;
+    }
+
+    if (seaweed.y > height) {
+        seaweed.y = 0;
+    } else if (seaweed.y < 0) {
+        seaweed.y = height;
+    }
+
+    //Display the seaweed images on the canvas
+    push();
+    imageMode(CENTER);
+    image(seaweed.image, seaweed.x, seaweed.y, seaweed.size, seaweed.size);
+    pop();
+
+    // drawing the water horizon
+    push();
+    fill("#73c6f3a5");
+    noStroke();
+    rect(0, 0, width, 300);
+    pop();
+}
+
