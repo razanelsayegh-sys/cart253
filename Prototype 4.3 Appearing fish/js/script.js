@@ -55,6 +55,8 @@ async function setup() {
  * Drawing the animation loop with the fish moving
 */
 function draw() {
+
+    //Starting the animation process
     if (state === "title") {
         title();
     } else if (state === "animation") {
@@ -62,6 +64,49 @@ function draw() {
     } else if (state === "ending") {
         endingScreen();
     }
+
+    // adding background details
+    push();
+    fill("#dcbb78");
+    noStroke();
+    rect(0, 500, 600, 200);
+    pop();
+
+    //adding a home to the fish (coral)
+    push();
+    fill("#ff6b6b");
+    noStroke();
+    rect(570, 350, 25, 150);
+    ellipse(570, 350, 40, 40);
+    ellipse(550, 390, 40, 40);
+    ellipse(590, 420, 40, 40);
+    ellipse(595, 350, 15, 15);
+    ellipse(560, 420, 20, 20);
+    ellipse(560, 450, 40, 40);
+    ellipse(530, 390, 15, 15);
+    ellipse(565, 480, 20, 20);
+    pop();
+
+    push();
+    fill("#df4e4e");
+    noStroke();
+    ellipse(590, 450, 40, 40);
+    ellipse(540, 350, 30, 30);
+    ellipse(565, 400, 25, 25);
+    ellipse(590, 370, 45, 45);
+    pop();
+
+    push();
+    fill("#ee8888");
+    noStroke();
+    ellipse(595, 470, 10, 10);
+    ellipse(590, 430, 15, 15);
+    ellipse(550, 370, 17, 17);
+    ellipse(560, 400, 5, 5);
+    ellipse(590, 345, 15, 15);
+    pop();
+
+
 }
 
 /**
