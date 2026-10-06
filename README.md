@@ -32,12 +32,12 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.2 Seaweed/js/script.js">View the script of this project</a>
 
-<h5> fish going home </h5>
-<img src="Image/Melting in the sun.png" > 
+<h5> A Fish Going Home </h5>
+<img src="Image/Fish.png" > 
 
-<a href="https://razanelsayegh-sys.github.io/cart253/Prototype%2030%20melting%20shapes/">View this project online</a>
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.3 Appearing fish">View this project online</a>
 
-<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 30 melting shapes/js/script.js">View the script of this project</a>
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.3 Appearing fish/js/script.js">View the script of this project</a>
 
 
 <h4> Animated Moments </h4>
