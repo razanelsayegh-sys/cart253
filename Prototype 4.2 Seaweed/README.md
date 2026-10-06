@@ -2,7 +2,7 @@
 
 AUTHOR NAME
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%204.2%20Seaweed/)
 
 ## Description
 
