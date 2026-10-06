@@ -39,7 +39,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.3 Appearing fish/js/script.js">View the script of this project</a>
 
-
+<br>
 <h4> Animated Moments </h4>
 <p> Projects of Septembre 29, 2026</p>
 
@@ -64,7 +64,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 30 melting shapes/js/script.js">View the script of this project</a>
 
-
+<br>
 <h4>Drawing Prototypes </h4>
 <p> Projects of Septembre 22, 2026</p>
 
