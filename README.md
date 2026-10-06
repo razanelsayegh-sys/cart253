@@ -32,7 +32,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.2 Seaweed/js/script.js">View the script of this project</a>
 
-<h5> Melting in the sun </h5>
+<h5> fish going home </h5>
 <img src="Image/Melting in the sun.png" > 
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype%2030%20melting%20shapes/">View this project online</a>
