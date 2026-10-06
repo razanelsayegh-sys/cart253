@@ -105,8 +105,6 @@ function draw() {
     ellipse(560, 400, 5, 5);
     ellipse(590, 345, 15, 15);
     pop();
-
-
 }
 
 /**
