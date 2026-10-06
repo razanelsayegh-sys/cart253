@@ -73,7 +73,46 @@ async function setup() {
  * Creating the drawing 
 */
 function draw() {
-    background("#ceb979");
+    background("#ceb9797a");
+
+    // drawing the water horizon
+    push();
+    fill("#73c6f3c4");
+    noStroke();
+    rect(0, 0, width, 300);
+    pop();
+
+    push();
+    fill("#55bcf3a5");
+    noStroke();
+    rect(0, 250, 600, 30);
+    pop();
+
+    push();
+    fill("#189fe7c1");
+    noStroke();
+    rect(0, 280, 600, 20);
+    pop();
+
+    //Drawing the horizon line
+    push();
+    stroke("#1e8abc");
+    strokeWeight(5);
+    line(0, 300, 600, 300);
+    pop();
+
+    //Drawing lines on the sand to create a more realistic effect of the sand
+    push();
+    stroke("#ba9e669b");
+    strokeWeight(2);
+    line(0, 350, 650, 650);
+    line(0, 460, 660, 660);
+    line(0, 570, 670, 670);
+    line(0, 680, 680, 680);
+    line(0, 790, 690, 690);
+    line(250, 300, 700, 690);
+    line(380, 300, 760, 740);
+    pop();
 
     //Calling the functions to move, wrap and draw the seaweed images
     moveSeaweed(seaweedImage1);
@@ -118,11 +157,7 @@ function wrapSeaweed(seaweed) {
     image(seaweed.image, seaweed.x, seaweed.y, seaweed.size, seaweed.size);
     pop();
 
-    // drawing the water horizon
-    push();
-    fill("#73c6f3a5");
-    noStroke();
-    rect(0, 0, width, 300);
-    pop();
+
+
 }
 
