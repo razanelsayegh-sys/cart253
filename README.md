@@ -14,8 +14,8 @@
 
 Here is a link to my <a href="Journal.md">Journal</a>.
 
-<h3> New </h3>
-<h4> Sea </h4>
+<h2> New </h2>
+<h3> Sea </h3>
 <p> Projects of Octobre 6, 2026</p>
 
 <h5> Jellyfish </h5>
@@ -40,7 +40,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.3 Appearing fish/js/script.js">View the script of this project</a>
 
 <br>
-<h4> Animated Moments </h4>
+<h3> Animated Moments </h3>
 <p> Projects of Septembre 29, 2026</p>
 
 <h5> The Magic Garden </h5>
@@ -65,7 +65,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 30 melting shapes/js/script.js">View the script of this project</a>
 
 <br>
-<h4>Drawing Prototypes </h4>
+<h3>Drawing Prototypes </h3>
 <p> Projects of Septembre 22, 2026</p>
 
 <h5> Prototype 1: City Lights </h5>
