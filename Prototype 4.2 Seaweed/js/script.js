@@ -1,24 +1,25 @@
 /**
- * Title of Project
- * Author Name
+ * Under the Sea
+ * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is a moving image around the canvas of 
+ * a seaweed, animated, a simple scene under the sea.
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creating the canvas
 */
 function setup() {
-
+    createCanvas(500, 600);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Creating the drawing 
 */
 function draw() {
+    background("#ceb979");
 
 }

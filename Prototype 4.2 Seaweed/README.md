@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# Under the Sea
 
 AUTHOR NAME
 
@@ -6,18 +6,16 @@ AUTHOR NAME
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+  It's a moving canvas when animated, the sepectator expirences moving around seaweeds, a simple scene under the sea. 
 
 ## Attribution
 
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
+This bit should attribute any code, assets or other elements used taken from other sources:
 
 > - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+> - This project uses the example code from the classroom, called [Screen Wrap](https://editor.p5js.org/pippinbarr/sketches/exJrLtvvU)
+> - To load the image of the seaweed image, i used the file left by the professor:https://pippinbarr.com/cart253/topics/extras/images.html 
 
 ## License
-
-This bit could include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
