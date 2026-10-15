@@ -30,6 +30,42 @@ function setup() {
     createCanvas(400, 400);
 }
 
+
+/**
+ * Starts the ball moving on mouse pressed
+ */
+function mousePressed() {
+    ball.velocity.x = ball.speed;
+}
+/**
+ * Stops the ball from moving , so that it only moves when the mouse is down
+ */
+
+function mouseReleased() {
+    ball.velocity.x = 0;
+}
+/**
+ * Grows the ball when the mouse wheel is rolled /trackpad
+ */
+function mouseWheel() {
+    ball.size += 0.5;
+}
+
+/**
+ * Resizes the ball when the mouse is rolled/ trackpad
+ */
+function mouseWheel(event) {
+
+    //add the number of pixels scrolled to the ball size
+    //Positive for scrolling down, Negative for scrolling up
+
+    ball.size += event.delta;
+
+    // Constrain the size of the ball so it doesn't get silly (gigantesque)
+    ball.size = constrain(ball.size, 10, width);
+
+}
+
 /**
  * Moves the ball and draws it
  */
@@ -45,3 +81,4 @@ function draw() {
     ellipse(ball.x, ball.y, ball.size);
     pop();
 }
+
