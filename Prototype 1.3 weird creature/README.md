@@ -2,7 +2,7 @@
 
 Razan Elsaygh
 
-[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%203%20weird%20creature/)
+[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%201.3%20weird%20creature/)
 
 ## Description
 

@@ -2,7 +2,7 @@
 
 Razan Elsaygh
 
-[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%2010%20Random%20Garden/)
+[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%202.1%20Random%20Garden/)
 
 ## Description
 

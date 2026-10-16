@@ -2,7 +2,7 @@
 
 Razan Elsaygh
 
-[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%202%20abstract/) 
+[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%201.2%20abstract/)  
 
 ## Description
 

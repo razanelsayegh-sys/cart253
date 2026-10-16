@@ -2,7 +2,7 @@
 
 Razan Elsaygh
 
-[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%2020%20Drawing%20canvas/)
+[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%202.2%20Drawing%20canvas/)
 
 ## Description
 
