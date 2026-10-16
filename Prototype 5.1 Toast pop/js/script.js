@@ -23,4 +23,31 @@ function setup() {
 function draw() {
     background('yellow');
 
+    // Drawing the toaster body 
+    push();
+    fill('lightblue');
+    noStroke();
+    rect(160, 205, 260, 180, 20, 20, 20, 20); //the 4 last numbers = radius to every corner to make them rounded
+    pop();
+
+    //drawing the base of the toaster
+    push();
+    fill('darkgrey');
+    noStroke();
+    rect(150, 370, 280, 20, 20, 20, 20, 20);
+
+    // the two legs
+    rect(380, 370, 50, 30, 20, 20, 20, 20);
+    rect(150, 370, 50, 30, 20, 20, 20, 20);
+    pop();
+
+    //Drawing the toaster handel
+    push();
+    fill('darkgrey');
+    noStroke();
+    rect(140, 260, 20, 10, 20, 20, 0, 0);
+    pop();
+
+
 }
+
