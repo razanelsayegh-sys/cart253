@@ -7,6 +7,12 @@
 
 "use strict";
 
+//Variables for the toast animation
+let toastY = 175; // to store the vertical position of the toast
+let popSpeed = 5; //controls how quickly the toast moves
+let popped = false; //this tells the program wheter the toast has been activated
+let toastVelocity = 5; //to controle the bounce of the toast
+
 /**
  * Creating the canvas
 */
@@ -27,8 +33,8 @@ function draw() {
     push();
     fill('#F3D7A2');
     stroke('#cc946a');
-    strokeWeight(5)
-    rect(215, 175, 150, 150, 20, 20, 20, 20);
+    strokeWeight(5);
+    rect(215, toastY, 150, 150, 20, 20, 20, 20);
     pop();
 
     // Drawing the toaster body 
@@ -49,7 +55,7 @@ function draw() {
     rect(150, 370, 50, 30, 20, 20, 20, 20);
     pop();
 
-    //Drawing the toaster handel
+    //Drawing the toaster handle
     push();
     fill('darkgrey');
     noStroke();
