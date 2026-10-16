@@ -17,9 +17,10 @@ function setup() {
 
 
 /**
- * Adding the background and making the static objects of 
+ * Adding the background color and making the static objects of 
  * the drawing such as the toaster
 */
 function draw() {
+    background('yellow');
 
 }
