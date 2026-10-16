@@ -1,23 +1,24 @@
 /**
- * Title of Project
- * Author Name
+ * Morning toast 
+ * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * When the user uses the mouse the toast pop out of the toaster. 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creating the canvas
 */
 function setup() {
+    createCanvas(600, 400);
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Adding the background and making the static objects of 
+ * the drawing such as the toaster
 */
 function draw() {
 
