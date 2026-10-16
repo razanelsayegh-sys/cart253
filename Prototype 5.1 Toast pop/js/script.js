@@ -23,6 +23,14 @@ function setup() {
 function draw() {
     background('yellow');
 
+    //Drawing the toast that will when the mouse event is added
+    push();
+    fill('#F3D7A2');
+    stroke('#cc946a');
+    strokeWeight(5)
+    rect(215, 175, 150, 150, 20, 20, 20, 20);
+    pop();
+
     // Drawing the toaster body 
     push();
     fill('lightblue');
@@ -47,6 +55,7 @@ function draw() {
     noStroke();
     rect(140, 260, 20, 10, 20, 20, 0, 0);
     pop();
+
 
 
 }
