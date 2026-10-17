@@ -7,11 +7,28 @@
 
 "use strict";
 
-//Variables for the toast animation
-let toastY = 175; // to store the vertical position of the toast
-let popSpeed = 5; //controls how quickly the toast moves
-let popped = false; //this tells the program wheter the toast has been activated
-let toastVelocity = 5; //to controle the bounce of the toast
+//Constant for the toast animation
+const toast = {
+    // Position
+    x: 215,
+    y: 175,
+
+    // Size
+    width: 150,
+    height: 150,
+    speed: 5,
+
+    // Speed when it pops
+    velocity: {
+        x: 0,
+        y: 0
+    },
+
+    // Check if the toast has been activated 
+    popped: false
+
+
+};
 
 /**
  * Creating the canvas
@@ -29,12 +46,24 @@ function setup() {
 function draw() {
     background('yellow');
 
+    //Move the toast when it has been activated
+    if (toast.popped === true) {
+        toast.y += toast.velocity.y;
+
+        //Stops the toast at a certain reaches so it would stay in the canvas
+        if (toast.y <= 30) {      //to check if the toast has reached the max verticaly
+            toast.y = 30;       //Stops the toast from going above it 
+            toast.velocity.y = 0;
+        }
+    }
+
+
     //Drawing the toast that will when the mouse event is added
     push();
     fill('#F3D7A2');
     stroke('#cc946a');
     strokeWeight(5);
-    rect(215, toastY, 150, 150, 20, 20, 20, 20);
+    rect(toast.x, toast.y, toast.width, toast.height, 20, 20, 20, 20);
     pop();
 
     // Drawing the toaster body 
@@ -62,7 +91,13 @@ function draw() {
     rect(140, 260, 20, 10, 20, 20, 0, 0);
     pop();
 
+}
 
-
+/**
+ * Creating the mouse function to make the animation of the toast with the mouse
+*/
+function mousePressed() {
+    toast.popped = true;
+    toast.velocity.y = -toast.speed;
 }
 
