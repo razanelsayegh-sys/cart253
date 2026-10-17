@@ -149,11 +149,6 @@ function drawToaster() {
     rect(190, 220, 200, 130, 20, 20, 20, 20);
     pop();
 
-
-
-
-
-
 }
 
 

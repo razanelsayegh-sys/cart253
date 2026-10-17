@@ -14,6 +14,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 
 > - This project uses [p5.js](https://p5js.org).
 > - I used a lot of the exemples shown in class, like the mousePressed notes and the conditionals notes from last week. 
+> - For the mousePressed part i checked two refrences from the p5.js refrence site: [if](https://p5js.org/reference/p5/if/?utm_source) and [mousePressed](https://p5js.org/reference/p5/if/?utm_source) to understand more about how I could create my vision. 
 
 ## License
 
