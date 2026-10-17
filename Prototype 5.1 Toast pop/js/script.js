@@ -5,6 +5,7 @@
  * When the user uses the mouse the toast pop out of the toaster. 
  */
 
+
 "use strict";
 
 //Constant for the toast animation
@@ -25,38 +26,53 @@ const toast = {
     },
 
     // Check if the toast has been activated 
-    popped: false
+    popped: false,
 
-
+    down: false
 };
+
 
 /**
  * Creating the canvas
 */
 function setup() {
     createCanvas(600, 400);
-
 }
 
 
 /**
- * Adding the background color and making the static objects of 
- * the drawing such as the toaster
+ * Creating function for diffrent part of the animation
 */
 function draw() {
     background('yellow');
+
+    drawToast();
+    drawToaster();
+}
+
+
+/**
+ * drawing the toast and it's animation
+ */
+function drawToast() {
 
     //Move the toast when it has been activated
     if (toast.popped === true) {
         toast.y += toast.velocity.y;
 
         //Stops the toast at a certain reaches so it would stay in the canvas
-        if (toast.y <= 30) {      //to check if the toast has reached the max verticaly
-            toast.y = 30;       //Stops the toast from going above it 
+        if (toast.y <= 30 && toast.down === false) {       //to check if the toast has reached the max verticaly
+            toast.y = 30;          //Stops the toast from going above it 
             toast.velocity.y = 0;
         }
-    }
 
+        //stops the toast when it returns inside
+        if (toast.y >= 175 && toast.down === true) {
+            toast.y = 175;
+            toast.velocity.y = 0;
+            toast.down = false;
+        }
+    }
 
     //Drawing the toast that will when the mouse event is added
     push();
@@ -65,6 +81,14 @@ function draw() {
     strokeWeight(5);
     rect(toast.x, toast.y, toast.width, toast.height, 20, 20, 20, 20);
     pop();
+}
+
+
+/**
+ * Adding the background color and making the static objects of 
+ * the drawing such as the toaster
+*/
+function drawToaster() {
 
     // Drawing the toaster body 
     push();
@@ -90,14 +114,26 @@ function draw() {
     noStroke();
     rect(140, 260, 20, 10, 20, 20, 0, 0);
     pop();
-
 }
+
 
 /**
  * Creating the mouse function to make the animation of the toast with the mouse
 */
 function mousePressed() {
-    toast.popped = true;
-    toast.velocity.y = -toast.speed;
+
+    //first click: pop the toast up
+    if (toast.popped === false) {
+        toast.popped = true;
+        toast.velocity.y = -toast.speed;
+    }
+
+    //second click the toast is sent back down to it's initial place
+    else if (toast.y <= 30 && toast.down === false) {
+        toast.down = true;
+        toast.velocity.y = toast.speed;
+    }
 }
+
+
 

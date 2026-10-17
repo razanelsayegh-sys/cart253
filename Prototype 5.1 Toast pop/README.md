@@ -6,7 +6,7 @@ Razan Elsaygh
 
 ## Description
 
-This prototype shows a small everyday event, a piece of toast that pops up of a toaster when they mouse is moved up and when it's moved down the toast desapears again to then it would be burned. 
+This prototype shows a small everyday event, a piece of toast that pops up of a toaster when the mouse is used and when it's moved down the toast desapears again to then it would be burned. 
 
 ## Attribution
 
