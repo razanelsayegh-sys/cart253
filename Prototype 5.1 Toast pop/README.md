@@ -13,7 +13,7 @@ This prototype shows a small everyday event, a piece of toast that pops up of a 
 This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
-> - 
+> - I used a lot of the exemples shown in class, like the mousePressed notes and the conditionals notes from last week. 
 
 ## License
 

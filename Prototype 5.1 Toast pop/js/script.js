@@ -79,6 +79,8 @@ function drawToast() {
     fill('#F3D7A2');
     stroke('#cc946a');
     strokeWeight(5);
+
+
     rect(toast.x, toast.y, toast.width, toast.height, 20, 20, 20, 20);
     pop();
 }
