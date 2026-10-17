@@ -46,6 +46,30 @@ function setup() {
 function draw() {
     background('yellow');
 
+    //added fumes in this function so that they would disapear when the toast animation is activated
+    push();
+    fill(255, 255, 255, 160); //fourth number for the transparency
+    noStroke()
+    ellipse(250, 100, 20, 120);
+    ellipse(300, 100, 20, 120);
+    ellipse(330, 100, 20, 120);
+
+    pop();
+
+    push();
+    fill('yellow');
+    noStroke();
+    ellipse(260, 70, 20, 50);
+    ellipse(290, 140, 10, 50);
+    ellipse(275, 100, 40, 70);
+    ellipse(240, 120, 20, 90);
+    ellipse(315, 100, 30, 90);
+    ellipse(305, 105, 10, 90);
+    ellipse(325, 140, 10, 50);
+    ellipse(340, 60, 15, 70);
+    ellipse(350, 140, 30, 50);
+    pop();
+
     drawToast();
     drawToaster();
 }
@@ -116,6 +140,20 @@ function drawToaster() {
     noStroke();
     rect(140, 260, 20, 10, 20, 20, 0, 0);
     pop();
+
+    //added toaster reflections
+    push();
+    noFill();
+    stroke('#ffffff');
+    strokeWeight(2);
+    rect(190, 220, 200, 130, 20, 20, 20, 20);
+    pop();
+
+
+
+
+
+
 }
 
 
