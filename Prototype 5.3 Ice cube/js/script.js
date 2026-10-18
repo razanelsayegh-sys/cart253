@@ -181,6 +181,7 @@ function drawSplash() {
     }
 }
 
+
 /**
  * Starting the ice cube falling activation and hidding the splash
  * Handel Keypress:
