@@ -36,7 +36,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 
 <h5> Ice Splash </h5>
-<img src="Image/Jellyfish.png" > 
+<img src="Image/ice cube.png" > 
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.3 Ice cube">View this project online</a>
 
