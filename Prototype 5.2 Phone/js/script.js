@@ -87,6 +87,8 @@ function changeNotification() {
 */
 function draw() {
     background('#F3E8FF');
+
+    //functions 
     drawPhone();
 
 }
