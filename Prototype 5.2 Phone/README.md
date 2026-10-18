@@ -13,7 +13,7 @@ This program shows a phone that reacts when a notification appears. The animatio
 This bit should attribute any code, assets or other elements used taken from other sources.
 
 > - This project uses [p5.js](https://p5js.org).
-> - 
+> - Use the notes about the time event given on the teacher's website.
 
 ## License
 
