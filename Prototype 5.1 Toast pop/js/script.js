@@ -52,7 +52,6 @@ function draw() {
     drawFumes();
     drawToast();
     drawToaster();
-    mousePressed();
 
 
 
@@ -164,24 +163,23 @@ function draw() {
     }
 
 
+}
 
-    /**
+/**
      * Creating the mouse function to make the animation of the toast with the mouse
     */
-    function mousePressed() {
+function mousePressed() {
 
-        //first click: pop the toast up
-        if (toast.popped === false) {
-            toast.popped = true;
-            toast.velocity.y = -toast.speed;
-        }
-
-        //second click the toast is sent back down to it's initial place
-        else if (toast.y <= 30 && toast.down === false) {
-            toast.down = true;
-            toast.velocity.y = toast.speed;
-        }
+    //first click: pop the toast up
+    if (toast.popped === false) {
+        toast.popped = true;
+        toast.velocity.y = -toast.speed;
     }
 
+    //second click the toast is sent back down to it's initial place
+    else if (toast.y <= 30 && toast.down === false) {
+        toast.down = true;
+        toast.velocity.y = toast.speed;
+    }
 }
 
