@@ -12,13 +12,16 @@
  * Drawing the canvas
 */
 function setup() {
+    createCanvas(300, 600)
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Creating the drawing (with diffrent drawNames) of the phone and the animation 
 */
 function draw() {
+
+    //function created to make the drawing in order
 
 }
