@@ -166,8 +166,8 @@ function draw() {
 }
 
 /**
-     * Creating the mouse function to make the animation of the toast with the mouse
-    */
+ * Creating the mouse function to make the animation of the toast with the mouse
+*/
 function mousePressed() {
 
     //first click: pop the toast up
