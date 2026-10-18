@@ -8,14 +8,26 @@
 
 "use strict";
 
-//The notification
+//The notification banner
 const notifAppear = {
+
     //Position
-    x: 110,
-    y: 130,
+    x: 130,
+    y: 390,
+
+    //Size
+    size: {
+        x: 150,
+        y: 70,
+    },
+
+    //Rounded sides
+    round: {
+        x: 20,
+    },
 
     //Colors
-    fill: '#88c9ff',
+    fill: '#fffefed5',
 
     fills: {
 
@@ -26,7 +38,7 @@ const notifAppear = {
     },
 
     //Time between changes in milliseconds
-    delay: 5000
+    delay: 2000  //to make it slower
 
 };
 
@@ -34,7 +46,38 @@ const notifAppear = {
  * Drawing the canvas
 */
 function setup() {
-    createCanvas(400, 600)
+    createCanvas(400, 600);
+
+    //Start the notification blinking
+
+    setInterval(changeNotification, notifAppear.delay);
+
+}
+
+/**
+ * Change the notification's color
+ */
+
+function changeNotification() {
+    //notif1(white) to notif2(blue)
+    if (notifAppear.fill === notifAppear.fills.notif1) {
+        notifAppear.fill = notifAppear.fills.notif2;
+    }
+
+    //notif2(blue) to notif3(pink)
+    else if (notifAppear.fill === notifAppear.fills.notif2) {
+        notifAppear.fill = notifAppear.fills.notif3;
+    }
+
+    //notif3(pink) to notif4(green)
+    else if (notifAppear.fill === notifAppear.fills.notif3) {
+        notifAppear.fill = notifAppear.fills.notif4;
+    }
+
+    //notif4(green) to notif1(white)
+    else if (notifAppear.fill === notifAppear.fills.notif4) {
+        notifAppear.fill = notifAppear.fills.notif1;
+    }
 
 }
 
@@ -43,46 +86,54 @@ function setup() {
  * Creating the drawing (with diffrent drawNames) of the phone and the animation 
 */
 function draw() {
-    background('#e2fcc9');
-
-    //function created to make the drawing in order
+    background('#F3E8FF');
     drawPhone();
 
-
-    /**
-     * Drawing the phone
-     */
-
-    function drawPhone() {
-
-        //Drawing the phone
-        push();
-        fill('#88c9ff');
-        stroke('black');
-        strokeWeight(3);
-        rect(110, 130, 190, 350, 20, 20, 20, 20);
-        pop();
-
-        //Creating the side buttons
-        push();
-        fill('black');
-        noStroke();
-        //side buttons on the left
-        rect(105, 220, 5, 30, 20, 20, 20, 20);
-        rect(105, 260, 5, 30, 20, 20, 20, 20);
-
-        //side button on the right
-        rect(300, 220, 5, 50, 20, 20, 20, 20);
-        pop();
-
-        //Creating the mic/camera
-        push();
-        fill('black');
-        noStroke();
-        rect(180, 140, 50, 15, 20, 20, 20, 20);
-        pop();
-    }
+}
 
 
+/**
+ * Drawing the phone(static part)
+ */
+
+function drawPhone() {
+
+    //Drawing the phone
+    push();
+    fill('#88c9ff');
+    stroke('black');
+    strokeWeight(3);
+    rect(110, 130, 190, 350, 20, 20, 20, 20);
+    pop();
+
+    //Creating the side buttons
+    push();
+    fill('black');
+    noStroke();
+    //side buttons on the left
+    rect(105, 220, 5, 30, 20, 20, 20, 20);
+    rect(105, 260, 5, 30, 20, 20, 20, 20);
+
+    //side button on the right
+    rect(300, 220, 5, 50, 20, 20, 20, 20);
+    pop();
+
+    //Creating the mic/camera
+    push();
+    fill('black');
+    noStroke();
+    rect(180, 140, 50, 15, 20, 20, 20, 20);
+    pop();
+
+    //Drawing a notification badge
+
+    push();
+    fill(notifAppear.fill);
+    noStroke();
+    rect(notifAppear.x, notifAppear.y, notifAppear.size.x, notifAppear.size.y, notifAppear.round.x, notifAppear.round.x, notifAppear.round.x, notifAppear.round.x);
+    pop();
 
 }
+
+
+
