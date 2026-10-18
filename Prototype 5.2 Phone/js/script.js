@@ -1,15 +1,15 @@
 /**
- * Title of Project
- * Author Name
+ * Notification
+ * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is a drawing of a phone where a notification will 
+ * suddenly appear after a certain time. 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Drawing the canvas
 */
 function setup() {
 
