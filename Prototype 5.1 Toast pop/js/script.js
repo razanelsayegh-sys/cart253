@@ -45,6 +45,9 @@ function setup() {
 */
 function draw() {
 
+    //drawing the background
+    background('yellow');
+
     //function created to make the drawing in order
     drawFumes();
     drawToast();
@@ -52,8 +55,7 @@ function draw() {
     mousePressed();
 
 
-    //drawing the background
-    background('yellow');
+
 
     function drawFumes() {
         // Added fumes 
@@ -160,6 +162,7 @@ function draw() {
         pop();
 
     }
+
 
 
     /**
