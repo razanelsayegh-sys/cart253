@@ -20,15 +20,15 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <p> Projects of Octobre 20, 2026</p>
 
 <h5> Morning toast </h5>
-<img src="Image/Jellyfish.png" > 
+<img src="Image/toast.png" > 
 
-<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.1 Toast pop">View this project online</a>
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype%205.1%20Toast%20pop">View this project online</a>
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.1 Toast pop/js/script.js">View the script of this project</a>
 
 
 <h5> Notification </h5>
-<img src="Image/Jellyfish.png" > 
+<img src="Image/Notification.png" > 
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.2 Phone">View this project online</a>
 

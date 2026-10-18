@@ -21,7 +21,7 @@ const iceCube = {
     corners: 20,
 
     //color
-    fill: '#F0FAFF',
+    fill: '#d3ecf9',
 
     //check if the ice cube is falling
 
@@ -138,7 +138,7 @@ function drawWater() {
 function drawIceCube() {
     push();
     fill(iceCube.fill);
-    stroke('#d5e9f3');
+    stroke('#bed5e1');
     strokeWeight(2);
     rect(iceCube.x, iceCube.y, iceCube.size, iceCube.size, iceCube.corners, iceCube.corners, iceCube.corners, iceCube.corners);
     pop();

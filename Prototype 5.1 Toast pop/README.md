@@ -2,7 +2,7 @@
 
 Razan Elsaygh
 
-[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%205.1%20Toast%20pop/)
+[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%205.1%20Toast%20pop)
 
 ## Description
 
