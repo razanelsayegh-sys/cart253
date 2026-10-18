@@ -2,7 +2,7 @@
 
 Razan Elsaygh
 
-[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%205.2%20Phone)
+[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%205.3%20Ice%20cube)
 
 ## Description
 
