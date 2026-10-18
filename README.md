@@ -15,6 +15,36 @@
 Here is a link to my <a href="Journal.md">Journal</a>.
 
 <h2> New </h2>
+
+<h3> Daily Activities</h3>
+<p> Projects of Octobre 20, 2026</p>
+
+<h5> Morning toast </h5>
+<img src="Image/Jellyfish.png" > 
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.1 Toast pop">View this project online</a>
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.1 Toast pop/js/script.js">View the script of this project</a>
+
+
+<h5> Notification </h5>
+<img src="Image/Jellyfish.png" > 
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.2 Phone">View this project online</a>
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.2 Phone/js/script.js">View the script of this project</a>
+
+
+<h5> Ice Splash </h5>
+<img src="Image/Jellyfish.png" > 
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.3 Ice cube">View this project online</a>
+
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.3 Ice cube/js/script.js">View the script of this project</a>
+
+
+
+
 <h3> Sea </h3>
 <p> Projects of Octobre 6, 2026</p>
 
