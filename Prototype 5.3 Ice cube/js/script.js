@@ -11,11 +11,11 @@
 const iceCube = {
 
     //position
-    x: 175,
-    y: 50,
+    x: 160,
+    y: 30,
 
     //size
-    size: 50,
+    size: 80,
 
     //color
     fill: '#F0FAFF',
@@ -26,7 +26,7 @@ const iceCube = {
 
     //speed
 
-    speed: 5
+    speed: 2.5
 
 };
 
@@ -37,7 +37,7 @@ const iceSplash = {
     y: 350,
 
     //size
-    size: 20,
+    size: 5,
 
     //color
     fill: '#9ff2f2',
@@ -112,7 +112,7 @@ function drawWater() {
  */
 
 function drawIceCube() {
-    fill(drawIceCube.fill);
+    fill(iceCube.fill);
     stroke('#d5e9f3');
     strokeWeight(2);
     rect(iceCube.x, iceCube.y, iceCube.size, iceCube.size);
@@ -123,14 +123,46 @@ function drawIceCube() {
  */
 
 function drawSplash() {
-    if (iceSplash.visible === true) { //Draws the splash when it<s visible
-        noFill();
+    if (iceSplash.visible === true) { //Draws the splash when it's visible
+        fill('#9ff2f2');
         stroke(iceSplash.fill);
         strokeWeight(3);
+
+        //Drawing lots of splashes around the ice cube
         ellipse(iceSplash.x, iceSplash.y, iceSplash.size * 3, iceSplash.size);
         ellipse(iceSplash.x, iceSplash.y, iceSplash.size * 5, iceSplash.size * 2);
+        ellipse(iceSplash.x * 2, iceSplash.y / 2, iceSplash.size, iceSplash.size);
+        ellipse(iceSplash.x / 2, iceSplash.y / 3, iceSplash.size, iceSplash.size);
+        ellipse(iceSplash.x + 60, iceSplash.y - 20, iceSplash.size / 2, iceSplash.size);
+        ellipse(iceSplash.x - 100, iceSplash.y - 20, iceSplash.size, iceSplash.size);
+
+        // splashes on the left
+        ellipse(iceSplash.x - 40, iceSplash.y - 25, iceSplash.size, iceSplash.size);
+        ellipse(iceSplash.x - 65, iceSplash.y - 45, iceSplash.size / 2, iceSplash.size / 2);
+        ellipse(iceSplash.x - 90, iceSplash.y - 15, iceSplash.size, iceSplash.size / 2);
+
+        //splashes on the right
+        ellipse(iceSplash.x + 40, iceSplash.y - 25, iceSplash.size, iceSplash.size);
+        ellipse(iceSplash.x + 65, iceSplash.y - 45, iceSplash.size / 2, iceSplash.size / 2);
+        ellipse(iceSplash.x + 90, iceSplash.y - 15, iceSplash.size, iceSplash.size / 2);
+
+        // splashes on the cube
+        ellipse(iceSplash.x - 25, iceSplash.y - 60, iceSplash.size / 2, iceSplash.size / 2);
+        ellipse(iceSplash.x + 25, iceSplash.y - 70, iceSplash.size / 2, iceSplash.size / 2);
+        ellipse(iceSplash.x + 5, iceSplash.y - 45, iceSplash.size / 2, iceSplash.size / 2);
+
+
     }
 }
 
-
+/**
+ * Starting the ice cube falling activation and hidding the splash
+ * Handel Keypress:
+ * down arrow = 40
+ */
+function keyPressed() {
+    if (keyCode === DOWN_ARROW) {
+        iceCube.falling = true;  //Falling becomes true, so the ice cube starts moving down
+        iceSplash.visible = false;  //the splash can't appear at the same time as the cube, it needs to be after 
+    }
 }
