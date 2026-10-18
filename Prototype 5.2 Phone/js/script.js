@@ -8,11 +8,16 @@
 
 "use strict";
 
+//The notification
+const notifAppear = {
+
+}
+
 /**
  * Drawing the canvas
 */
 function setup() {
-    createCanvas(300, 600)
+    createCanvas(400, 600)
 
 }
 
@@ -21,7 +26,48 @@ function setup() {
  * Creating the drawing (with diffrent drawNames) of the phone and the animation 
 */
 function draw() {
+    background('#e2fcc9');
 
     //function created to make the drawing in order
+    drawPhone();
+
+
+    /**
+     * Drawing the phone
+     */
+
+    function drawPhone() {
+
+        //Drawing the phone
+        push();
+        fill('#88c9ff');
+        stroke('black');
+        strokeWeight(3);
+        rect(110, 130, 190, 350, 20, 20, 20, 20);
+        pop();
+
+        //Creating the side buttons
+        push();
+        fill('black');
+        noStroke();
+        //side buttons on the left
+        rect(105, 220, 5, 30, 20, 20, 20, 20);
+        rect(105, 260, 5, 30, 20, 20, 20, 20);
+
+        //side button on the right
+        rect(300, 220, 5, 50, 20, 20, 20, 20);
+        pop();
+
+        //Creating the mic/camera
+        push();
+        fill('black');
+        noStroke();
+        rect(180, 140, 50, 15, 20, 20, 20, 20);
+        pop();
+
+
+    }
+
+
 
 }
