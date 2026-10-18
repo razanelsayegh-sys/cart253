@@ -12,10 +12,13 @@ const iceCube = {
 
     //position
     x: 160,
-    y: 30,
+    y: 20,
 
     //size
     size: 80,
+
+    //corners
+    corners: 20,
 
     //color
     fill: '#F0FAFF',
@@ -58,6 +61,28 @@ function setup() {
 
 }
 
+/**
+ * Drawing the water
+ */
+function drawWater() {
+    //drawing the water base
+    push();
+    noStroke();
+    fill('#9ff2f2');
+    rect(0, 350, 400, 150);
+    pop();
+
+    //drawing water rings
+
+    push();
+    noFill();
+    stroke('#66c2c2');
+    strokeWeight(2);
+    ellipse(200, 420, 600, 120);
+    ellipse(200, 420, 400, 50);
+    ellipse(200, 420, 200, 20);
+    pop();
+}
 
 /**
  * Drawing the background and adding the functions
@@ -65,9 +90,9 @@ function setup() {
 function draw() {
     background('#e39cae');
 
-    //functions (in order)
-    drawWater();
+    //functions 
     drawIceCube();
+    drawWater();
     drawSplash();
 
     //Make the ice cube fall (use an if statement)
@@ -76,8 +101,7 @@ function draw() {
         iceCube.y = iceCube.y + iceCube.speed; //If the ice cube is falling, how fast it moves
 
         //check if the ice cube touches the water
-        if (iceCube.y + iceCube.size >= iceSplash.y) {
-            iceCube.y = iceSplash.y - iceCube.size;   //Stop the ice cube at the surface of the water
+        if (iceCube.y >= iceSplash.y - 10) { //make the ice cube move after the water
             iceCube.falling = false;      //Stop the ice from falling
             iceSplash.visible = true;    //Make the splash appear
         }
@@ -112,10 +136,12 @@ function drawWater() {
  */
 
 function drawIceCube() {
+    push();
     fill(iceCube.fill);
     stroke('#d5e9f3');
     strokeWeight(2);
-    rect(iceCube.x, iceCube.y, iceCube.size, iceCube.size);
+    rect(iceCube.x, iceCube.y, iceCube.size, iceCube.size, iceCube.corners, iceCube.corners, iceCube.corners, iceCube.corners);
+    pop();
 }
 
 /**
@@ -158,7 +184,7 @@ function drawSplash() {
 /**
  * Starting the ice cube falling activation and hidding the splash
  * Handel Keypress:
- * down arrow = 40
+ * down arrow = DOWN_ARROW
  */
 function keyPressed() {
     if (keyCode === DOWN_ARROW) {
