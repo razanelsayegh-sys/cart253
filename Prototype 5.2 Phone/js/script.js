@@ -10,8 +10,25 @@
 
 //The notification
 const notifAppear = {
+    //Position
+    x: 110,
+    y: 130,
 
-}
+    //Colors
+    fill: '#88c9ff',
+
+    fills: {
+
+        notif1: '#fffefed5',
+        notif2: '#008cff9d',
+        notif3: '#ff88f7c8',
+        notif4: '#a3fdb3be'
+    },
+
+    //Time between changes in milliseconds
+    delay: 5000
+
+};
 
 /**
  * Drawing the canvas
@@ -64,8 +81,6 @@ function draw() {
         noStroke();
         rect(180, 140, 50, 15, 20, 20, 20, 20);
         pop();
-
-
     }
 
 
