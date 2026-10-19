@@ -41,9 +41,9 @@ Overall, these prototypes helped me understand how a code can express an emotion
 
 <h4> 18 oct 2026 </h4>
 
-<p> 
+<p> Throughout this week, I became more comfortable organizing my code into objects and functions, and developed a better understanding of how certain functions work. Debugging my work by checking the code carefully and looking for spelling mistakes or placement mistakes also became easier.
 
-In each prototype, the hardest part was adding the photo and figuring out where the errors were comming from, either the preload or from forgetting imageMode (CENTRE). Once I understood the structure and where my mistakes usally are, everything became easier. I was sruprised to know how conditionals can change the behavior of the image, expressing a personality and making a stroy or interactive image.
+In the first prototype, I found it difficult to understand how to use one mousePressed() function to trigger different actions depending on when it was clicked. To understand this, I read the documentation and tried different approaches to make the interaction work. Reading the documentation helped me understand a little better how to use mouse events.The second prototype was easier to create and understand, especially when working with the time events. However, using setInterval() at the beginning in the setup() function was a little confusing. In most of my prototypes, I decided to challenge myself by combining concepts I had difficulty understanding in previous weeks with the topic this week.Throughout this process, I understood how to use the Boolean values to control the state of an object. I also learned how to use a keyboard event to start a movement and how to use conditions to detect when it reached the water.
 
-Overall, these prototypes helped me understand how a code can express an emotion and a narative, not just a movement such as the last drawing "Fish going home". </p>
-<img src="Image/Jellyfish.png" >
+Overall, these prototypes helped me explore how events can be triggered in different ways by user interaction, by time, or by an object's position. </p>
+<img src="Image/exemple .png" >
