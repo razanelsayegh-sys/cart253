@@ -12,7 +12,7 @@
 <p>The purpose of this website is to show all my coursework for CART 253, including my prototypes and reflections. It's a sapce where I will share my projects and reflect on how i grow and improve during the semester.</p>
 <br>
 
-Here is a link to my <a href="Journal.md">Journal</a>.
+Here is a link to my <a href="Journal.html">Journal</a>.
 
 <h2> New </h2>
 

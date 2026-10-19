@@ -38,3 +38,12 @@ In each prototype, the hardest part was adding the photo and figuring out where 
 
 Overall, these prototypes helped me understand how a code can express an emotion and a narative, not just a movement such as the last drawing "Fish going home". </p>
 <img src="Image/Jellyfish.png" >
+
+<h4> 18 oct 2026 </h4>
+
+<p> 
+
+In each prototype, the hardest part was adding the photo and figuring out where the errors were comming from, either the preload or from forgetting imageMode (CENTRE). Once I understood the structure and where my mistakes usally are, everything became easier. I was sruprised to know how conditionals can change the behavior of the image, expressing a personality and making a stroy or interactive image.
+
+Overall, these prototypes helped me understand how a code can express an emotion and a narative, not just a movement such as the last drawing "Fish going home". </p>
+<img src="Image/Jellyfish.png" >
