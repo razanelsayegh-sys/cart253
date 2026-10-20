@@ -61,28 +61,7 @@ function setup() {
 
 }
 
-/**
- * Drawing the water
- */
-function drawWater() {
-    //drawing the water base
-    push();
-    noStroke();
-    fill('#9ff2f2');
-    rect(0, 350, 400, 150);
-    pop();
 
-    //drawing water rings
-
-    push();
-    noFill();
-    stroke('#66c2c2');
-    strokeWeight(2);
-    ellipse(200, 420, 600, 120);
-    ellipse(200, 420, 400, 50);
-    ellipse(200, 420, 200, 20);
-    pop();
-}
 
 /**
  * Drawing the background and adding the functions
@@ -90,7 +69,7 @@ function drawWater() {
 function draw() {
     background('#e39cae');
 
-    //functions created to make the drawing 
+    //functions created to make the drawing (in order)
     drawIceCube();
     drawWater();
     drawSplash();
@@ -109,6 +88,19 @@ function draw() {
 }
 
 /**
+ * Drawing the ice cube
+ */
+
+function drawIceCube() {
+    push();
+    fill(iceCube.fill);
+    stroke('#bed5e1');
+    strokeWeight(2);
+    rect(iceCube.x, iceCube.y, iceCube.size, iceCube.size, iceCube.corners, iceCube.corners, iceCube.corners, iceCube.corners);
+    pop();
+}
+
+/**
  * Drawing the water
  */
 function drawWater() {
@@ -131,18 +123,7 @@ function drawWater() {
     pop();
 }
 
-/**
- * Drawing the ice cube
- */
 
-function drawIceCube() {
-    push();
-    fill(iceCube.fill);
-    stroke('#bed5e1');
-    strokeWeight(2);
-    rect(iceCube.x, iceCube.y, iceCube.size, iceCube.size, iceCube.corners, iceCube.corners, iceCube.corners, iceCube.corners);
-    pop();
-}
 
 /**
  * Draw the splash
