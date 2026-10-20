@@ -38,7 +38,7 @@ const notifAppear = {
     },
 
     //Time between changes in milliseconds
-    delay: 2000  //to make it slower
+    delay: 3000  //to make it slower
 
 };
 
