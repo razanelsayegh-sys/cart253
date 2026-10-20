@@ -16,9 +16,12 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <h2> New </h2>
 
+
+### prototype project nb.4
 <h3> Daily Activities</h3>
 <p> Projects of Octobre 20, 2026</p>
 
+### Prototype 1
 <h5> Morning toast </h5>
 <img src="Image/toast.png" > 
 
@@ -26,7 +29,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.1 Toast pop/js/script.js">View the script of this project</a>
 
-
+### Prototype 2
 <h5> Notification </h5>
 <img src="Image/Notification.png" > 
 
@@ -34,7 +37,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 5.2 Phone/js/script.js">View the script of this project</a>
 
-
+### Prototype 3
 <h5> Ice Splash </h5>
 <img src="Image/ice cube.png" > 
 
@@ -44,9 +47,11 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 
 
-
+### Thrid prototype project
 <h3> Sea </h3>
 <p> Projects of Octobre 6, 2026</p>
+
+### Prototype 1
 
 <h5> Jellyfish </h5>
 <img src="Image/Jellyfish.png" > 
@@ -55,12 +60,16 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.1 sea creature/js/script.js">View the script of this project</a>
 
+### Prototype 2
+
 <h5> Under the Sea </h5>
 <img src="Image/Under the Sea.png" > 
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.2 Seaweed">View this project online</a>
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.2 Seaweed/js/script.js">View the script of this project</a>
+
+### Prototype 3
 
 <h5> A Fish Going Home </h5>
 <img src="Image/Fish.png" > 
@@ -70,9 +79,12 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 4.3 Appearing fish/js/script.js">View the script of this project</a>
 
 
+### Second prototype project
 <br>
 <h3> Animated Moments </h3>
 <p> Projects of Septembre 29, 2026</p>
+
+### Prototype 1
 
 <h5> The Magic Garden </h5>
 <img src="Image/The Magic Garden.png" > 
@@ -81,12 +93,16 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 2.1 Random Garden/js/script.js">View the script of this project</a>
 
+### Prototype 2
+
 <h5> The Shower </h5>
 <img src="Image/The Shower.png" > 
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 2.2 Drawing canvas">View this project online</a>
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 2.2 Drawing canvas/js/script.js">View the script of this project</a>
+
+### Prototype 3
 
 <h5> Melting in the sun </h5>
 <img src="Image/Melting in the sun.png" > 
@@ -96,10 +112,13 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 2.3 melting shapes/js/script.js">View the script of this project</a>
 
 
+
+### first prototypes
 <br>
 <h3>Drawing Prototypes </h3>
 <p> Projects of Septembre 22, 2026</p>
 
+### Prototype 1
 <h5> Prototype 1: City Lights </h5>
 <img src="Image/City lights.png" >
 
@@ -107,6 +126,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 1.1 city lights/js/script.js">View the script of this project</a>
 
+### Prototype 2
 <h5> Prototype 2: Abstract Art </h5>
 <img src="Image/Abstract.png" >
 
@@ -114,6 +134,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 1.2 abstract/js/script.js">View the script of this project</a>
 
+### Prototype 3
 <h5> Prototype 3: Weird Creature </h5>
 <img src="Image/Weird Creature.png" >
 
