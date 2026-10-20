@@ -90,7 +90,7 @@ function drawWater() {
 function draw() {
     background('#e39cae');
 
-    //functions 
+    //functions created to make the drawing 
     drawIceCube();
     drawWater();
     drawSplash();
