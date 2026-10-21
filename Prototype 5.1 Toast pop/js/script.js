@@ -56,18 +56,23 @@ function draw() {
 
 
 }
-
+/**
+ * Making fumes on top of the toast
+ */
 function drawFumes() {
     // Added fumes 
     push();
     fill(255, 255, 255, 160); //fourth number for the transparency
-    noStroke()
-    ellipse(250, 100, 20, 120);
+    noStroke();
+    //Right
+    ellipse(250, 100, 20, 120);   //Main big ellipes
+    //Middel
     ellipse(300, 100, 20, 120);
+    //Left
     ellipse(330, 100, 20, 120);
-
     pop();
 
+    //These are hidening part of the top ellipses to make give them a curve effect
     push();
     fill('yellow');
     noStroke();
@@ -96,7 +101,7 @@ function drawToast() {
         toast.y += toast.velocity.y;
 
         //Stops the toast at a certain reaches so it would stay in the canvas
-        if (toast.y <= 30 && toast.down === false) {       //to check if the toast has reached the max verticaly
+        if (toast.y <= 30 && toast.down === false) {       //to check if the toast has reached the max verticaly (y axis)
             toast.y = 30;          //Stops the toast from going above it 
             toast.velocity.y = 0;
         }
@@ -111,11 +116,12 @@ function drawToast() {
 
     //Drawing the toast that will when the mouse event is added
     push();
+    // Toast features
     fill('#F3D7A2');
     stroke('#cc946a');
     strokeWeight(5);
 
-
+    //Toast dimension
     rect(toast.x, toast.y, toast.width, toast.height, 20, 20, 20, 20);
     pop();
 }
@@ -152,7 +158,7 @@ function drawToaster() {
     rect(140, 260, 20, 10, 20, 20, 0, 0);
     pop();
 
-    //added toaster reflections
+    //added toaster top reflection
     push();
     noFill();
     stroke('#ffffff');
@@ -176,7 +182,7 @@ function mousePressed() {
         toast.velocity.y = -toast.speed;
     }
 
-    //second click the toast is sent back down to it's initial place
+    //second click the toast is sent back down 
     else if (toast.y <= 30 && toast.down === false) {
         toast.down = true;
         toast.velocity.y = toast.speed;
