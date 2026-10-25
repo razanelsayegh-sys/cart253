@@ -2,23 +2,24 @@
  * Stars Show
  * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * The goal is to create an animation where a star change apprence when the 
+ * users mouse is pressed
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creating the canvas
 */
 function setup() {
-
+    createCanvas(600, 400);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * creating the drawing/ aniamtion
 */
 function draw() {
-
+    //Background color
+    background("#17233f");
 }
