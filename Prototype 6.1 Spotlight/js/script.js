@@ -36,8 +36,9 @@ function draw() {
 
     drawCurtains();
     drawGhost(ghost); //To display the puppet 
-    drawSpotlight();
+    drawSpotlight(mouseX, mouseY, 180); //call the mouse function inside(parameter)
 }
+
 /**
  * Drawing the curtains of the theatre
  */
@@ -129,4 +130,15 @@ function drawGhost(ghost) {
     ellipse(ghost.x + 27, ghost.y + 12, 12, 7);
     pop();
 
+}
+
+function drawSpotlight(x, y, size) {
+
+    //Drawing the spotlight
+
+    push();
+    fill("#f7f4f5b1");
+    noStroke();
+    ellipse(mouseX, mouseY, 180);
+    pop();
 }
