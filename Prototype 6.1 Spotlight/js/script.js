@@ -9,8 +9,27 @@
 
 "use strict";
 
+/**
+ * All the vaiables 
+ */
 //The ghost
 let ghost = undefined;
+
+//Check if the ghost is visible ot not
+let ghostVisible = false;
+
+//Check if the ghost is caught
+let ghostCaught = false;
+
+// How long is the game (in milliseconds)
+let gameTimer = 10 * 1000; //10 seconds
+
+//If the game is over yet
+let gameOver = false;
+
+//Current score of the player
+let score = 0;
+
 
 /**
  * Creating the Canvas
@@ -19,9 +38,79 @@ function setup() {
     createCanvas(600, 400);
 
     //Calling the ghost variable createGhost() to create it 
-    ghost = createGhost(80); //80 is the Size of the ghost
+    ghost = createGhost(80);  //80 is the Size of the ghost
+
+    //Start the timer
+    startGameOverTimer();
+}
+/**
+ * Starts a timer that will end the game
+ */
+function startGameOverTimer() {
+    setTimeout(endGame, gameTimer);
 }
 
+/**
+ * Ends the game
+ */
+function endGame() {
+    gameOver = true;
+}
+
+
+
+/**
+ * Creating the drawing and it's animation
+*/
+function draw() {
+
+
+    background("#2b234e");
+
+    // Draw the curtains
+    drawCurtains();
+    drawScore();
+
+    // If the game isn't over
+    if (!gameOver) {
+
+        // Draw the spotlight
+        drawSpotlight(mouseX, mouseY, 180);
+
+        // Check if the spotlight finds the ghost
+        let overlap = dist(mouseX, mouseY, ghost.x, ghost.y);
+
+        if (overlap < 50 && !ghostCaught) {
+            ghostCaught = true;
+            score++; //Add one point everytime the ghost is found
+            ghostVisible = true;
+            moveGhost(ghost); //To make the ghost move everytime the spotlight is on the ghost
+        }
+
+        //Reset when the spotlight is no longer near the ghost
+        if (overlap >= 50) {
+            ghostCaught = false;
+        }
+
+        // Draw the ghost only when it's visible
+        if (ghostVisible) {
+            drawGhost(ghost);
+        }
+
+    }
+
+    // If the game is over
+    else {
+        drawGameOver();
+    }
+}
+
+
+
+/**
+ * Creates a ghost object with a random position and provided size
+ * 
+ */
 function createGhost(size) {
 
     const ghost = {
@@ -31,7 +120,7 @@ function createGhost(size) {
         y: random(0, height),
 
         //Size
-        size: 80,
+        size: size,
 
         colour: '#e5f2f7',
 
@@ -39,20 +128,16 @@ function createGhost(size) {
 
     return ghost;  // sends the completed object back to the place wehre the function is called
 }
+
 /**
- * Creating the drawing
-*/
-function draw() {
+ * Makes the ghost run to a new position whenever it is caught
+ */
+function moveGhost(ghost) {
 
-    background("#2b234e");
-
-    //Drawing the static element of the drawing (in order)
-
-    drawCurtains();
-    drawGhost(ghost); //To display the puppet 
-    drawSpotlight(mouseX, mouseY, 180); //call the mouse function inside(parameter)
-
+    ghost.x = random(50, width - 50);
+    ghost.y = random(50, height - 50);
 }
+
 
 
 /**
@@ -103,7 +188,9 @@ function drawCurtains() {
     pop();
 }
 
-//Drawing the ghost
+/**
+ * Drawing the ghost
+ */
 function drawGhost(ghost) {
 
     // Body of the ghost
@@ -136,6 +223,7 @@ function drawGhost(ghost) {
     //Drawing the Mouth
     push();
     fill("#4a1428");
+    ellipse(ghost.x, ghost.y + 12, 5, 5);
     pop();
 
     //Pink cheeks
@@ -146,8 +234,12 @@ function drawGhost(ghost) {
     ellipse(ghost.x + 27, ghost.y + 12, 12, 7);
     pop();
 
+
 }
 
+/**
+ * Drawing the spotlight
+ */
 function drawSpotlight(x, y, size) {
 
     //Drawing the spotlight
@@ -155,6 +247,32 @@ function drawSpotlight(x, y, size) {
     push();
     fill("#f7f4f5b1");
     noStroke();
-    ellipse(mouseX, mouseY, 180);
+    ellipse(x, y, 100);
+    pop();
+}
+
+/**
+ * Displays the players score
+ */
+
+function drawScore() {
+    push();
+    fill("white");
+    noStroke();
+    textSize(20);
+    textAlign(LEFT, TOP);
+    text('Score:' + score, 20, 20);
+    pop();
+}
+
+/**
+ * Displaythe game is over message
+ */
+function drawGameOver() {
+    push();
+    fill("white");
+    textAlign(CENTER, CENTER);
+    textSize(28);
+    text("The show is over!", width / 2, height / 2);
     pop();
 }

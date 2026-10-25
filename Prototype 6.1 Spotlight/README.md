@@ -6,14 +6,16 @@ Razan Elsaygh
 
 ## Description
 
-This is a drawing of puppets that appears somewhere on the stage, but the user has to find it by moving the spotlight with the mouse. The puppet's position changes eveytime randomly the timer has ended. 
+This is a drawing of ghosts that appears somewhere on the stage, but the user has to find it by moving the spotlight with the mouse. The ghost's position changes eveytime randomly the timer has ended. 
 
 ## Attribution
 
 This bit should attribute any code, assets or other elements used taken from other sources.
 
 > - This project uses [p5.js](https://p5js.org).
-> - 
+> - I used the notes shown in class
+> - for the timer I used the [Coin Collector example] (https://editor.p5js.org/pippinbarr/sketches/qOdVBY1nQ)
+> - Used the [IF] refrence (https://p5js.org/reference/p5/if)
 
 ## License
 
