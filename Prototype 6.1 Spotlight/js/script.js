@@ -10,21 +10,35 @@
 "use strict";
 
 //The ghost
-const ghost = {
-    x: 280,
-    y: 180,
-    size: 80,
-    colour: '#e5f2f7',
-};
+let ghost = undefined;
 
 /**
  * Creating the Canvas
 */
 function setup() {
     createCanvas(600, 400);
+
+    //Calling the ghost variable createGhost() to create it 
+    ghost = createGhost(80); //80 is the Size of the ghost
 }
 
+function createGhost(size) {
 
+    const ghost = {
+
+        //Position to be random
+        x: random(0, width),
+        y: random(0, height),
+
+        //Size
+        size: 80,
+
+        colour: '#e5f2f7',
+
+    };
+
+    return ghost;  // sends the completed object back to the place wehre the function is called
+}
 /**
  * Creating the drawing
 */
@@ -37,7 +51,9 @@ function draw() {
     drawCurtains();
     drawGhost(ghost); //To display the puppet 
     drawSpotlight(mouseX, mouseY, 180); //call the mouse function inside(parameter)
+
 }
+
 
 /**
  * Drawing the curtains of the theatre
