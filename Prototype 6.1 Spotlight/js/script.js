@@ -2,22 +2,23 @@
  * Spotlight
  * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * The Foal is to create a theatre stage where the user moves a spoltlight 
+ * with the mouse to find a hidden puppet before the timer end and the puppet 
+ * moves to a random position.
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creating the Canvas
 */
 function setup() {
-
+    createCanvas(600, 400);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Creating the drawing
 */
 function draw() {
 
