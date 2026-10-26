@@ -65,7 +65,7 @@ function setup() {
  * Position of the masks randomly on the canvas, making sure they don't overlap
  * 
  */
-function resetMask() {
+function resetMask(mask) { //To all the masks
     mask.x = random(mask.size / 2, width - mask.size / 2);
     mask.y = random(mask.size / 2, height - mask.size / 2);
 }
@@ -115,7 +115,7 @@ function drawScore() {
     fill("#6ac5ed");
     textSize(64);
     textStyle(BOLD);
-    texteAlign(CENTER, CENTER);
+    textAlign(screenLeft, TOP);
     text(score, 20, 20);
     pop();
 }
@@ -130,7 +130,7 @@ function drawGameOver() {
     noStroke();
     textSize(48);
     textStyle(BOLD);
-    texteAlign(CENTER, CENTER);
+    textAlign(CENTER, CENTER);
     text("Game Over", width / 2, height / 2);
     pop();
 }
@@ -162,4 +162,40 @@ function drawMask(mask) {
     arc(mask.x, mask.y + 12, 22, 12, 0, PI);
     pop();
 
+}
+
+/**
+ * Collect the mask when clicked with the mouse function
+ */
+
+function mousePressed() {
+    //Check mask clicks it the game isn't over yet
+    if (!gameOver) {
+
+        //Check if the mask (first) is clicked
+        const dOne = dist(mouseX, mouseY, maskOne.x, maskOne.y);
+
+        if (dOne < maskOne.size / 2) {
+            score++;
+            resetMask(maskOne);
+        }
+
+        //Check if the second mask is clicked
+        const dTwo = dist(mouseX, mouseY, maskTwo.x, maskTwo.y);
+
+        if (dTwo < maskTwo.size / 2) {
+            score++;
+            resetMask(maskTwo);
+        }
+
+        //Check if mask three is clicked
+        const dThree = dist(mouseX, mouseY, maskThree.x, maskThree.y);
+
+        if (dThree < maskThree.size / 2) {
+            score++;
+            resetMask(maskThree);
+        }
+
+
+    }
 }
