@@ -14,6 +14,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 
 > - This project uses [p5.js](https://p5js.org).
 > - Used the notes given by the teacher
+>- To draw the star, I used this p5.js [refrence](https://editor.p5js.org/ks1439/sketches/hoqDD1O5E)
 
 ## License
 

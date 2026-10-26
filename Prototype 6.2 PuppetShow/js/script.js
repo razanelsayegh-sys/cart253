@@ -19,8 +19,8 @@ function setup() {
     createCanvas(600, 400);
 
     //Calling the stars variable createStar()
-    starOne = createStar(220, 170, 100, "#ffd84d");
-    starTwo = createStar(380, 170, 100, "#ff9ed2");
+    starOne = createStar(220, 170, 80, "#ffd84d");
+    starTwo = createStar(380, 170, 50, "#ff9ed2");
 }
 
 
@@ -33,6 +33,10 @@ function draw() {
 
     // Functions draw created
     drawStage();
+
+    drawStar(starOne);
+    drawStar(starTwo);
+
 }
 
 
@@ -102,7 +106,54 @@ function createStar(x, y, size, colour) {
         y: y,
         size: size,
         colour: colour,
-        bright: true
+        bright: false
     };
     return star;
 }
+
+/**
+ * 
+ * Draws each star and makes it glow when the mouse is pressed 
+ */
+function drawStar(star) {
+    push();
+    noStroke();
+
+    //Draw the glow only when the star is bright
+    if (star.bright) {
+        fill("#fff700");
+    }
+    else {
+        fill(star.colour);
+    }
+
+    //Drawing the actual star
+    drawStarShape(star.x, star.y, star.size * 0.5, star.size, 5);
+    pop();
+}
+
+/**
+ * Drawing the Star, the five point parts of the star shape
+ */
+
+function drawStarShape(x, y, radius1, radius2, npoints) {
+    let angle = TWO_PI / npoints;
+    let halfAngle = angle / 2.0;
+    beginShape();
+    for (let a = 0; a < TWO_PI; a += angle) {
+        let sx = x + cos(a) * radius2;
+        let sy = y + sin(a) * radius2;
+        vertex(sx, sy);
+        sx = x + cos(a + halfAngle) * radius1;
+        sy = y + sin(a + halfAngle) * radius1;
+        vertex(sx, sy);
+    }
+    endShape(CLOSE);
+}
+
+function mousePressed() {
+    starOne.bright = !starOne.bright;
+    starTwo.bright = !starTwo.bright;
+}
+
+
