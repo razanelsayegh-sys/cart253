@@ -109,7 +109,10 @@ function drawBackgroundStars() {
     noStroke();
 
 
-    //Drawing little stars
+    //Drawing little stars in repeat by using the 'for' statment to help 
+    // repeating a certain number of times 
+    //'i'(index) is a variable that counts how many times the loop has repeated
+    //'+' means adding 1 after each repetition
     for (let i = 0; i < 20; i++) {
         let x = random(600);
         let y = random(350);
@@ -130,11 +133,16 @@ function drawBackgroundStars() {
 function createStar(x, y, size, colour, brightColour) {
     let star = {
         x: x,
-        y: y,
+        y: 0,
         size: size,
         colour: colour,
         brightColour: brightColour,
-        bright: false
+        bright: false,
+
+        //To make the stars move
+        targetY: y,
+        speed: 2.5,
+        falling: false
     };
     return star;
 }
@@ -168,6 +176,20 @@ function drawStar(star) {
     pop();
 
 
+    //Make the stars fall
+    push();
+    if (star.falling) {
+        star.y += star.speed; //Speed of the stars
+
+        //Stop the star at a certain point 
+        if (star.y >= star.targetY) {
+            star.y = star.targetY;
+            star.falling = false;
+        }
+    }
+    pop();
+
+
 }
 
 /**
@@ -198,4 +220,14 @@ function mousePressed() {
     starTwo.bright = !starTwo.bright;
 }
 
-
+/**
+ * Starting the stars falling activation 
+ * Handel Keypress:
+ * down arrow = DOWN_ARROW
+ */
+function keyPressed() {
+    if (keyCode === DOWN_ARROW) {
+        starOne.falling = true;  //Falling becomes true, so the starts moving down
+        starTwo.falling = true;
+    }
+}
