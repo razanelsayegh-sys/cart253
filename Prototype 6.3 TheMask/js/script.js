@@ -90,6 +90,49 @@ function endGame() {
 */
 function draw() {
     background(backgroundColour);
+
+    //Function(to always display it)
+    drawScore();
+
+    //Condition: if the game isn't over, draw thhe curent mask)
+    if (!gameOver) {
+        drawMask(maskOne);
+        drawMask(maskTwo);
+        drawMask(maskThree);
+    }
+    //Else, display the message of 'game over'
+    else {
+        drawGameOver();
+    }
+}
+/**
+ * To display the score of the player
+ */
+
+function drawScore() {
+
+    push();
+    fill("#6ac5ed");
+    textSize(64);
+    textStyle(BOLD);
+    texteAlign(CENTER, CENTER);
+    text(score, 20, 20);
+    pop();
+}
+
+/**
+ * To display the 'game over' message
+ */
+function drawGameOver() {
+
+    push();
+    fill("#6ac5ed");
+    noStroke();
+    textSize(48);
+    textStyle(BOLD);
+    texteAlign(CENTER, CENTER);
+    text("Game Over", width / 2, height / 2);
+    pop();
 }
 
 /**
