@@ -1,9 +1,9 @@
 /**
- * Title of Project
- * Author Name
+ * Mask
+ * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Creat a game where the users use its mouse to collect diffrent masks 
+ * in random position in a certain time.
  */
 
 "use strict";
