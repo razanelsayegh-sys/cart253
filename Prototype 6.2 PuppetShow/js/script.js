@@ -8,11 +8,19 @@
 
 "use strict";
 
+//Variables
+let starOne;
+let starTwo;
+
 /**
  * Creating the canvas
 */
 function setup() {
     createCanvas(600, 400);
+
+    //Calling the stars variable createStar()
+    starOne = createStar(220, 170, 100, "#ffd84d");
+    starTwo = createStar(380, 170, 100, "#ff9ed2");
 }
 
 
@@ -82,4 +90,19 @@ function drawStage() {
     ellipse(600, 0, 100, 220);
     pop();
 
+}
+
+/**
+ * Creats the Stars witht their provided position, colour and sizes in setup()
+ */
+
+function createStar(x, y, size, colour) {
+    let star = {
+        x: x,
+        y: y,
+        size: size,
+        colour: colour,
+        bright: true
+    };
+    return star;
 }
