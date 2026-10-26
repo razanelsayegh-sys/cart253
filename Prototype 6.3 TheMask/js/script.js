@@ -21,7 +21,8 @@ const maskOne = {
     x: undefined,  //They will get their position in setup then in the resetMask function
     y: undefined,
     size: 60,
-    fill: "#ff9ed2"
+    fill: "#D4AF37",
+    expression: "happy"
 };
 
 //Second mask
@@ -29,7 +30,8 @@ const maskTwo = {
     x: undefined,
     y: undefined,
     size: 60,
-    fill: "#ffd84d"
+    fill: "#8B1E3F",
+    expression: "sad"
 };
 
 //Third mask
@@ -37,7 +39,8 @@ const maskThree = {
     x: undefined,
     y: undefined,
     size: 60,
-    fill: "#8be9fd"
+    fill: "#0F8B8D",
+    expression: ""
 }
 
 //How long the game will last, in milliseconds
@@ -105,6 +108,8 @@ function draw() {
         drawGameOver();
     }
 }
+
+
 /**
  * To display the score of the player
  */
@@ -159,7 +164,27 @@ function drawMask(mask) {
     noFill();
     stroke("#242044");
     strokeWeight(3);
-    arc(mask.x, mask.y + 12, 22, 12, 0, PI);
+
+    //Adding condition to the facial expression of the masks
+    //Mask expression happy
+    if (mask.expression === "happy") {
+        //happy simle
+        arc(mask.x, mask.y + 12, 22, 15, 0, PI);
+    }
+
+    //Mask expression sad
+    else if (mask.expression === "sad") {
+        //happy sad
+        arc(mask.x, mask.y + 22, 22, 15, PI, TWO_PI);
+    }
+
+    //Mask expression surprised
+    else if (mask.expression === "surprised") {
+        //happy surprised
+        arc(mask.x, mask.y + 15, 10, 14);
+    }
+
+
     pop();
 
 }
