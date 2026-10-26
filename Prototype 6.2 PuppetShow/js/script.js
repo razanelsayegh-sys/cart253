@@ -11,6 +11,7 @@
 //Variables
 let starOne;
 let starTwo;
+let speed = 30; // this for the background stars
 
 /**
  * Creating the canvas
@@ -19,8 +20,8 @@ function setup() {
     createCanvas(600, 400);
 
     //Calling the stars variable createStar()
-    starOne = createStar(220, 170, 80, "#ffd84d");
-    starTwo = createStar(380, 170, 50, "#ff9ed2");
+    starOne = createStar(220, 170, 80, "#ffd84d", "#fcf802");
+    starTwo = createStar(380, 170, 50, "#ff9ed2", "#ff36a1");
 }
 
 
@@ -32,8 +33,10 @@ function draw() {
     background("#17233f");
 
     // Functions draw created
+    drawBackgroundStars();
     drawStage();
 
+    //Drawing both stars
     drawStar(starOne);
     drawStar(starTwo);
 
@@ -97,15 +100,40 @@ function drawStage() {
 }
 
 /**
+ * Drawing little stars in the background
+ */
+function drawBackgroundStars() {
+
+    push();
+    fill("#fcf802");
+    noStroke();
+
+
+    //Drawing little stars
+    for (let i = 0; i < 20; i++) {
+        let x = random(600);
+        let y = random(350);
+        let size = random(2, 5);
+
+
+        ellipse(x, y, size);
+    }
+    pop();
+
+}
+
+
+/**
  * Creats the Stars witht their provided position, colour and sizes in setup()
  */
 
-function createStar(x, y, size, colour) {
+function createStar(x, y, size, colour, brightColour) {
     let star = {
         x: x,
         y: y,
         size: size,
         colour: colour,
+        brightColour: brightColour,
         bright: false
     };
     return star;
@@ -116,12 +144,20 @@ function createStar(x, y, size, colour) {
  * Draws each star and makes it glow when the mouse is pressed 
  */
 function drawStar(star) {
+    //Drawing the string that holds the star
+    push();
+    stroke("#d6d6d6");
+    strokeWeight(2);
+    line(star.x, 0, star.x, star.y);
+    pop();
+
+    //Drawing the condition of the star glow
     push();
     noStroke();
 
     //Draw the glow only when the star is bright
     if (star.bright) {
-        fill("#fff700");
+        fill(star.brightColour);
     }
     else {
         fill(star.colour);
@@ -130,6 +166,8 @@ function drawStar(star) {
     //Drawing the actual star
     drawStarShape(star.x, star.y, star.size * 0.5, star.size, 5);
     pop();
+
+
 }
 
 /**
@@ -150,6 +188,10 @@ function drawStarShape(x, y, radius1, radius2, npoints) {
     }
     endShape(CLOSE);
 }
+
+/**
+ * MousePressed function to the users mouse activity
+ */
 
 function mousePressed() {
     starOne.bright = !starOne.bright;

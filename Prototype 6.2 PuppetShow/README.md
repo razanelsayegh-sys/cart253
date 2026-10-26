@@ -15,6 +15,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 > - This project uses [p5.js](https://p5js.org).
 > - Used the notes given by the teacher
 >- To draw the star, I used this p5.js [refrence](https://editor.p5js.org/ks1439/sketches/hoqDD1O5E)
+>- To make stare background movement, I found a way to repeat multiple stars in one frame it [For] statement(https://p5js.org/reference/p5/for)
 
 ## License
 
