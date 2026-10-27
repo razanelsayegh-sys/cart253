@@ -48,11 +48,11 @@ In the first prototype, I found it difficult to understand how to use one mouseP
 Overall, these prototypes helped me explore how events can be triggered in different ways by user interaction, by time, or by an object's position. </p>
 <img src="Image/exemple .png" >
 
-<h4> 18 oct 2026 </h4>
+<h4> 26 oct 2026 </h4>
 
-<p> This week, I became more familiar with calling functions to perform specific tasks. I practised using parameters to reuse the same function for diffretn objects, such as drawMask(mask) and restMask(mask), in the last project. I also tried to be organise my code into sections, with comments that explaining the purpose of variables and functions, as well as more difficult parts of the code. 
+<p> This week, I became more familiar with calling functions to perform specific tasks. I practised using parameters to reuse the same function for different objects, such as drawMask(mask) and restMask(mask), in the last project. I also tried to organise my code into sections, with comments that explain the purpose of variables and functions, as well as more difficult parts of the code.
 
 Each prototype had its own challenges, such as drawing a star and understanding how to pass objects into functions using parameters.Making my drawings interactive and interesting enough to keep the user engaged was also challenging. For example, making the masks disappear and reappear in a new random positions required me to understand how setTimeOut() works so I could apply it correctly in my last prototype "Mask Collection".
 
-Overall, these prototypes challenged me even more then last week's projects and helped me become more comfortable with functions, parameters and interactive coding. </p>
+Overall, these prototypes challenged me even more than last week's projects and helped me become more comfortable with functions, parameters and interactive coding. </p>
 <img src="Image/Mask example.png" >
