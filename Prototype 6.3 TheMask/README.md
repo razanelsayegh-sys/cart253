@@ -6,7 +6,7 @@ Razan Elsaygh
 
 ## Description
 
-A Mask appear on the canvas when the user click on it another one appears, in a certain time the users has to collect as much as they can. Clicking on the mask collects it and changes its appearance.
+Masks appear on the canvas, and the user must collect them as many as possible before 10 seconds runs out another one appears. Clicking on the mask collects it, increases the score, and makes it disappear. After a few seconds, the mask reappears in a new random postion. the games uses functions, objects, conditionals, mouse interaction and time-based events to create the animation.
 
 ## Attribution
 
@@ -14,7 +14,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 
 > - This project uses [p5.js](https://p5js.org).
 > - Got inspired by the [Coin Collector](https://editor.p5js.org/pippinbarr/sketches/qOdVBY1nQ).
-> - 
+> - For the Timeout, used this [refrence](https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout) 
 
 ## License
 

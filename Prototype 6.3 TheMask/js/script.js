@@ -21,8 +21,9 @@ const maskOne = {
     x: undefined,  //They will get their position in setup then in the resetMask function
     y: undefined,
     size: 60,
-    fill: "#D4AF37",
-    expression: "happy"
+    fill: "#D4A017",
+    expression: "happy",
+    visibility: true
 };
 
 //Second mask
@@ -30,8 +31,9 @@ const maskTwo = {
     x: undefined,
     y: undefined,
     size: 60,
-    fill: "#8B1E3F",
-    expression: "sad"
+    fill: "#ac2fd2",
+    expression: "sad",
+    visibility: true
 };
 
 //Third mask
@@ -39,8 +41,9 @@ const maskThree = {
     x: undefined,
     y: undefined,
     size: 60,
-    fill: "#0F8B8D",
-    expression: ""
+    fill: "#2541B2",
+    expression: "surprised",
+    visibility: true
 }
 
 //How long the game will last, in milliseconds
@@ -64,6 +67,7 @@ function setup() {
     startGameOverTimer();
 }
 
+
 /**
  * Position of the masks randomly on the canvas, making sure they don't overlap
  * 
@@ -73,12 +77,14 @@ function resetMask(mask) { //To all the masks
     mask.y = random(mask.size / 2, height - mask.size / 2);
 }
 
+
 /**
  * Start the timer
  */
 function startGameOverTimer() {
     setTimeout(endGame, gameTime);
 }
+
 
 /**
  * End the game
@@ -89,19 +95,45 @@ function endGame() {
 
 
 /**
+ * To make the masks disappear after a certain time of not being clicked on
+ */
+function hideAndReappear(mask) {
+    mask.visibility = false;  //tells the program that the mask shouldn't be drawn on the canvas
+
+    //adding a timeout to make the masks disappear after a certain time
+    setTimeout(function () {    // To wait for a certain time before disappearing 
+        resetMask(mask);    // mask reapears
+        mask.visibility = true;  //Now it's visible
+    }, 1000); //1 seconds
+}
+
+
+/**
  * Drawing the scene
 */
 function draw() {
     background(backgroundColour);
 
     //Function(to always display it)
+    drawCurtain();
     drawScore();
 
-    //Condition: if the game isn't over, draw thhe curent mask)
+
+    //Condition: if the game isn't over, draw the current mask
     if (!gameOver) {
-        drawMask(maskOne);
-        drawMask(maskTwo);
-        drawMask(maskThree);
+
+        if (maskOne.visibility) {
+            drawMask(maskOne);
+        }
+
+        if (maskTwo.visibility) {
+            drawMask(maskTwo);
+        }
+
+        if (maskThree.visibility) {
+            drawMask(maskThree);
+        }
+
     }
     //Else, display the message of 'game over'
     else {
@@ -120,10 +152,36 @@ function drawScore() {
     fill("#6ac5ed");
     textSize(64);
     textStyle(BOLD);
-    textAlign(screenLeft, TOP);
+    textAlign(LEFT, TOP);
     text(score, 20, 20);
     pop();
 }
+
+
+/**
+ * Drawing a curtain in the background of the drawing
+ */
+function drawCurtain() {
+
+    //Drawing the main part of the top curtain
+    push();
+    fill("#7A1E1E");
+    stroke("darkred");
+    strokeWeight(2);
+    ellipse(325, 0, 920, 520);
+    pop();
+
+    //Drawing the curtain lines
+    push();
+    noFill();
+    stroke("darkred");
+    strokeWeight(3);
+    ellipse(325, 50, 920, 320);
+    ellipse(425, 50, 920, 220);
+    ellipse(225, 20, 920, 150);
+    pop();
+}
+
 
 /**
  * To display the 'game over' message
@@ -139,6 +197,7 @@ function drawGameOver() {
     text("Game Over", width / 2, height / 2);
     pop();
 }
+
 
 /**
  *Drawing the mask
@@ -161,6 +220,7 @@ function drawMask(mask) {
 
     //Drawing the mouth
     push();
+
     noFill();
     stroke("#242044");
     strokeWeight(3);
@@ -181,13 +241,14 @@ function drawMask(mask) {
     //Mask expression surprised
     else if (mask.expression === "surprised") {
         //happy surprised
-        arc(mask.x, mask.y + 15, 10, 14);
+        ellipse(mask.x, mask.y + 15, 10, 10);
     }
 
 
     pop();
 
 }
+
 
 /**
  * Collect the mask when clicked with the mouse function
@@ -200,25 +261,25 @@ function mousePressed() {
         //Check if the mask (first) is clicked
         const dOne = dist(mouseX, mouseY, maskOne.x, maskOne.y);
 
-        if (dOne < maskOne.size / 2) {
+        if (maskOne.visibility && dOne < maskOne.size / 2) {
             score++;
-            resetMask(maskOne);
+            hideAndReappear(maskOne);
         }
 
         //Check if the second mask is clicked
         const dTwo = dist(mouseX, mouseY, maskTwo.x, maskTwo.y);
 
-        if (dTwo < maskTwo.size / 2) {
+        if (maskTwo.visibility && dTwo < maskTwo.size / 2) {
             score++;
-            resetMask(maskTwo);
+            hideAndReappear(maskTwo);
         }
 
         //Check if mask three is clicked
         const dThree = dist(mouseX, mouseY, maskThree.x, maskThree.y);
 
-        if (dThree < maskThree.size / 2) {
+        if (maskThree.visibility && dThree < maskThree.size / 2) {
             score++;
-            resetMask(maskThree);
+            hideAndReappear(maskThree);
         }
 
 
