@@ -18,6 +18,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <!-- Every new project-->
 <h2> New </h2>
 
+
 <!-- Prototype projects nb.5-->
 <h3> theatre</h3>
 <p> Projects of Octobre 27, 2026</p>
@@ -37,7 +38,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <!-- Prototype 2-->
 
 <h5> The Theatre stars </h5>
-<img src="Stars/.png" > 
+<img src="Image/Stars.png" > 
 
 <!-- Project link-->
 <a href="https://razanelsayegh-sys.github.io/cart253/Prototype 6.2 PuppetShow">View this project online</a>
