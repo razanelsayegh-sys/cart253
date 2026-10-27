@@ -273,6 +273,6 @@ function drawGameOver() {
     fill("white");
     textAlign(CENTER, CENTER);
     textSize(28);
-    text("The show is over!", width / 2, height / 2);
+    text("Oh so close!", width / 2, height / 2);
     pop();
 }
