@@ -2,7 +2,7 @@
 
 Razan Elsaygh
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://razanelsayegh-sys.github.io/cart253/Prototype%206.2%20PuppetShow/)
 
 ## Description
 Creating a small theatre where two stars. When the user clicks the mouse, the stars reacts by changing their colour. 
