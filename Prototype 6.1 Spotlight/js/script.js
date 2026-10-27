@@ -276,3 +276,4 @@ function drawGameOver() {
     text("Oh so close!", width / 2, height / 2);
     pop();
 }
+
