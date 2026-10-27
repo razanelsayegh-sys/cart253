@@ -261,7 +261,7 @@ function drawScore() {
     noStroke();
     textSize(20);
     textAlign(LEFT, TOP);
-    text('Score:' + score, 20, 20);
+    text(score, 20, 20);
     pop();
 }
 
