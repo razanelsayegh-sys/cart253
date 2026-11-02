@@ -1,17 +1,19 @@
 /**
- * Title of Project
- * Author Name
+ * Aqurium
+ * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * 
+ * It's a drawing of an aquarium with fish swimming around.When the users clicks 
+ * a new bubble appears and a new fish is added to the aquarium. 
  */
-
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creating the canvas
 */
 function setup() {
+
+    createCanvas(600, 500);
 
 }
 
