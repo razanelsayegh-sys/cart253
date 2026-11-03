@@ -119,7 +119,7 @@ function draw() {
     drawEnviroment();
     drawText();
 
-    //Draw evry fish in the array
+    //Draw evrey fish in the array
     for (let fish of fishes) {
         moveFish(fish);
         drawFish(fish);
