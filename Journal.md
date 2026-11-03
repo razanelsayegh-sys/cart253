@@ -65,4 +65,4 @@ Overall, these prototypes challenged me even more than last week's projects and 
 In the Arcade prototype, I had a difficulty understanding how to check whether the player was touching a specific coin and how to update its state once it was collected.Eventually with using Boolean values I was able to solve this problem.
 
 Overall, these three prototypes helped me better understand how arrays can be used to manage several objects at once. I also learned that working with arrays involves many different things such as strong objects and that it's important for me to understand what properties should be changed speacially when I'm writting condition. </p>
-<img src="Image/Mask example.png" >
+<img src="Image/Conditional exemple.png.png" >
