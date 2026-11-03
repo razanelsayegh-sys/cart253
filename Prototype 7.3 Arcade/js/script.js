@@ -48,8 +48,9 @@ function draw() {
 
     //Functions called
     drawArcade();
-    drawPlayer();
-    drawSocre();
+    drawPlayer(player);
+    drawScore();
+
 
     //Drawing the coins every coin in the array
     for (let coin of coins) {
@@ -102,7 +103,7 @@ function drawArcade() {
 /**
  * Drawing the players avatar
  */
-function drawPlayer() {
+function drawPlayer(player) {
     push();
     noStroke();
 
@@ -131,6 +132,33 @@ function drawCoin(coin) {
 }
 
 /**
+ * Moving the spaceship with the keyboard
+ */
+function keyPressed() {
+
+    //Move right(RIGHT_ARROW)
+    if (keyCode === RIGHT_ARROW && player.x < 450) {
+        player.x += tileSize;
+    }
+
+    //Move left(LEFT_ARROW)
+    else if (keyCode === LEFT_ARROW && player.x > 150) {
+        player.x -= tileSize;
+    }
+
+    //Move UP(UP_ARROW)
+    else if (keyCode === UP_ARROW && player.y > 150) {
+        player.y -= tileSize;
+    }
+
+    //Move down(DOWN_ARROW)
+    else if (keyCode === DOWN_ARROW && player.y < 450) {
+        player.y += tileSize;
+    }
+
+}
+
+/**
  * Displaying the score
  */
 
@@ -138,8 +166,9 @@ function drawScore() {
     push();
     fill("#FFFFFF");
     noStroke();
-    textSize(16);
+    textSize(50);
     textAlign(LEFT);
-    text(+ score, 145, 125);
+    textStyle(BOLD);
+    text(+ score, 45, 100);
     pop();
 }
