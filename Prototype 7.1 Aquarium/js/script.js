@@ -221,13 +221,13 @@ function moveFish(fish) {
     fish.x += fish.speed;
 
     // If the fish goes off the right side of the screen, reset its position to the left side
-    if (fish.x + fish.size / 2 > 590) {    //to check if the fish has left the aquarium position
-        fish.speed = -fish.speed;  //reverse the speed to make the fish move in the opposite direction
+    if (fish.speed > 0 && fish.x + fish.size / 2 > 590) {    //to check if the fish has left the aquarium position
+        fish.x = 15 - fish.size / 2;  //reappear on the left
     }
 
     //if the fish reaches the left side
-    if (fish.x - fish.size / 2 < 10) {
-        fish.speed = -fish.speed;
+    if (fish.speed < 0 && fish.x - fish.size / 2 < 10) {
+        fish.x = 590 + fish.size / 2;  //reappear on the right
     }
 }
 
@@ -270,16 +270,36 @@ function aquariumGradient(x, y, w, h, c1, c2) {
 }
 
 /**
- * Mouse pressed function to make the bubbles appear when the 
- * user clicks on the canvas and to add a new fish to the aquarium
+ * Key pressed function to make the bubbles appear when the 
+ * user presses "UP ARROW"  */
+function keyPressed() {
+
+    // Check if the UP_ARROW key is pressed and the mouse is within the aquarium area
+    if (keyCode === UP_ARROW &&
+        mouseX > 10 && mouseX < 590 && mouseY > 110 && mouseY < 460) {
+
+        // Add a new bubble at the mouse position
+        bubbles.push({    //push adds bubbles to the array
+            x: mouseX,
+            y: mouseY,
+            size: random(5, 20),
+            speed: random(1, 3)
+        });
+
+    }
+}
+
+/**
+ * Mouse pressed function to add a new fish to the aquarium when the user presses a key
  */
 function mousePressed() {
-    // Add a new bubble at the mouse position
-    bubbles.push({
+    // Add a new fish at the mouse position
+    fishes.push({
         x: mouseX,
         y: mouseY,
-        size: random(5, 20),
+        size: random(30, 70),
+        colour: color(random(255), random(255), random(255)),
         speed: random(1, 3)
     });
-
 }
+
