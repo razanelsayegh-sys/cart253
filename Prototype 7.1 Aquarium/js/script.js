@@ -269,3 +269,17 @@ function aquariumGradient(x, y, w, h, c1, c2) {
     pop();
 }
 
+/**
+ * Mouse pressed function to make the bubbles appear when the 
+ * user clicks on the canvas and to add a new fish to the aquarium
+ */
+function mousePressed() {
+    // Add a new bubble at the mouse position
+    bubbles.push({
+        x: mouseX,
+        y: mouseY,
+        size: random(5, 20),
+        speed: random(1, 3)
+    });
+
+}
