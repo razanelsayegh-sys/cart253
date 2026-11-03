@@ -113,7 +113,7 @@ function draw() {
     noFill();
     stroke("#e0eaf8");
     strokeWeight(5);
-    rect(5, 105, 590, 390);
+    rect(5, 65, 590, 430);
 
     //functions called
     drawEnviroment();
@@ -294,14 +294,17 @@ function keyPressed() {
  * Mouse pressed function to add a new fish to the aquarium when the user presses a key
  */
 function mousePressed() {
-    // Add a new fish at the mouse position
-    fishes.push({
-        x: mouseX,
-        y: mouseY,
-        size: random(30, 70),
-        colour: color(random(255), random(255), random(255)),
-        speed: random(1, 3)
-    });
+    //check if the mouse is inside the aquarium
+    if (mouseX > 10 && mouseX < 590 && mouseY > 110 && mouseY < 460) {
+        // Add a new fish at the mouse position
+        fishes.push({
+            x: mouseX,
+            y: mouseY,
+            size: random(30, 70),
+            colour: color(random(255), random(255), random(255)),
+            speed: random(1, 3)
+        });
+    }
 }
 
 /**
