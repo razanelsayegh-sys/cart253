@@ -27,7 +27,7 @@ let coins = [
     { x: 240, y: 150, collected: false },
     { x: 360, y: 210, collected: false },
     { x: 180, y: 270, collected: false },
-    { x: 420, y: 120, collected: false }
+    { x: 420, y: 150, collected: false }
 ]
 
 //Current score
@@ -141,20 +141,20 @@ function drawCoin(coin) {
 function collectCoins() {
     let coinCollected = false;
 
-    //check every coin in the array
-    for (let coinc of coins) {
+    // Check every coin in the array
+    for (let coin of coins) {
         if (player.x === coin.x && player.y === coin.y && !coin.collected) {
             coin.collected = true;
             score++;
             coinCollected = true;
-            break;// it immediately stops the loop
         }
     }
 
+    // Add a new coin if one was collected
     if (coinCollected) {
         coins.push({
-            x: ([150, 180, 210, 240, 270, 300, 330, 360, 390, 420, 450]),
-            y: ([150, 180, 210, 240, 270, 300]),
+            x: random([150, 180, 210, 240, 270, 300, 330, 360, 390, 420, 450]),
+            y: random([150, 180, 210, 240, 270, 300]),
             collected: false
         });
     }

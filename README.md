@@ -20,7 +20,7 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 
 
 <!-- Prototype projects nb.5-->
-<h3> theatre</h3>
+<h3> Theatre</h3>
 <p> Projects of Octobre 27, 2026</p>
 
 <!-- Prototype 1-->
