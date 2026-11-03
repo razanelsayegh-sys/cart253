@@ -1,24 +1,26 @@
 /**
- * Title of Project
- * Author Name
+ * Carnaval
+ * Razan Elsaygh
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Carnival booth with ballons, the user gets to pop the ballons 
+ * by clicking on them and new ballons get added to the screen.
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creating canvas
 */
 function setup() {
-
+    createCanvas(600, 500);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Creating the drawing
 */
 function draw() {
 
+    //Background colour
+    background("#A8DADC")
 }
