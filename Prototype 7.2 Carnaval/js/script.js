@@ -92,7 +92,7 @@ function hideAndReappear(balloon) {
 
         //Make the balloon visible again
         balloon.visibility = true;
-    }, 1000);
+    }, 1000);// 1second
 }
 
 
