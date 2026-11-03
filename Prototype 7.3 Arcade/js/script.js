@@ -5,6 +5,7 @@
  * Arcade game where the users collects coins with it,s avatar
  */
 
+
 "use strict";
 /**
  * variables for the arcade game
@@ -23,10 +24,10 @@ let player = {
 
 //Coins 
 let coins = [
-    { x: 240, y: 150 },
-    { x: 360, y: 210 },
-    { x: 180, y: 270 },
-    { x: 420, y: 120 }
+    { x: 240, y: 150, collected: false },
+    { x: 360, y: 210, collected: false },
+    { x: 180, y: 270, collected: false },
+    { x: 420, y: 120, collected: false }
 ]
 
 //Current score
@@ -48,13 +49,16 @@ function draw() {
 
     //Functions called
     drawArcade();
+    collectCoins();
     drawPlayer(player);
     drawScore();
 
 
     //Drawing the coins every coin in the array
     for (let coin of coins) {
-        drawCoin(coin);
+        if (!coin.collected) {  //The coin has not been collected yet
+            drawCoin(coin);
+        }
     }
 }
 
@@ -129,6 +133,31 @@ function drawCoin(coin) {
     fill('#FFD166');
     ellipse(coin.x, coin.y, 20);
     pop();
+}
+
+/**
+ * Checking if the player collects a coin
+ */
+function collectCoins() {
+    let coinCollected = false;
+
+    //check every coin in the array
+    for (let coinc of coins) {
+        if (player.x === coin.x && player.y === coin.y && !coin.collected) {
+            coin.collected = true;
+            score++;
+            coinCollected = true;
+            break;// it immediately stops the loop
+        }
+    }
+
+    if (coinCollected) {
+        coins.push({
+            x: ([150, 180, 210, 240, 270, 300, 330, 360, 390, 420, 450]),
+            y: ([150, 180, 210, 240, 270, 300]),
+            collected: false
+        });
+    }
 }
 
 /**
