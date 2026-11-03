@@ -6,7 +6,7 @@ Razan Elsaygh
 
 ## Description
 
-It's an aquarium simulation where fish swim around and interact with each other. The user can add new fish to the aquarium by clicking on the canvas.
+It's an aquarium simulation where fish swim around and interact with each other. The user can add new fish to the aquarium by clicking on the canvas, and add new bubbles by pressing the Up arrow key.
 
 ## Attribution
 

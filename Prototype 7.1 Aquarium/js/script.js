@@ -3,8 +3,8 @@
  * Razan Elsaygh
  * 
  * 
- * It's a drawing of an aquarium with fish swimming around.When the users clicks 
- * a new bubble appears and a new fish is added to the aquarium. 
+ * It's a drawing of an aquarium with fish swimming around.When the users clicks on the canvas
+ * a new fish is added to the aquarium and a new bubble appears when the Up arrow is pressed . 
  */
 
 "use strict";
@@ -117,6 +117,7 @@ function draw() {
 
     //functions called
     drawEnviroment();
+    drawText();
 
     //Draw evry fish in the array
     for (let fish of fishes) {
@@ -301,5 +302,18 @@ function mousePressed() {
         colour: color(random(255), random(255), random(255)),
         speed: random(1, 3)
     });
+}
+
+/**
+ * Text to display on the canvas (instructions)
+ */
+function drawText() {
+    push();
+    fill(255);
+    textSize(20);
+    noStroke();
+    textAlign(CENTER);
+    text("Click on the canvas/ Press UP ARROW", width / 2, 30);
+    pop();
 }
 
