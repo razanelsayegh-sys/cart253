@@ -14,6 +14,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 
 > - This project uses [p5.js](https://p5js.org).
 > - The course notes on arrays.
+>- The gradient effect was inspired by the [p5.js gradient example](https://editor.p5js.org/REAS/sketches/S1TNUPzim)
 
 ## License
 
