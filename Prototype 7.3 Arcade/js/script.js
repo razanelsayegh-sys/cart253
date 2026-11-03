@@ -33,13 +33,36 @@ let coins = [
 //Current score
 let score = 0;
 
+//How long thr game will last, in milliseconds
+let gameTime = 10 * 1000;
+
+//Game over
+let gameOver = false;
+
+
 /**
  * Creating canvas
 */
 function setup() {
     createCanvas(500, 600);
+
+    //Start the timer for the game to be over
+    startGameOverTimer();
 }
 
+/**
+ * Start the timer
+ */
+function startGameOverTimer() {
+    setTimeout(endGame, gameTime);
+}
+
+/**
+ * End the game
+ */
+function endGame() {
+    gameOver = true;
+}
 
 /**
  * Creating the drawing 
@@ -54,13 +77,35 @@ function draw() {
     drawScore();
 
 
-    //Drawing the coins every coin in the array
-    for (let coin of coins) {
-        if (!coin.collected) {  //The coin has not been collected yet
-            drawCoin(coin);
+    //Drawing the coins every coin in the array, if the game isn't over
+    if (!gameOver) {
+        for (let coin of coins) {
+            if (!coin.collected) {  //The coin has not been collected yet
+                drawCoin(coin);
+            }
         }
     }
+    //Else, display the message of the 'game over'
+    else {
+        drawGameOver();
+    }
 }
+
+/**
+* To display the 'game over' message
+*/
+function drawGameOver() {
+
+    push();
+    fill("#6ac5ed");
+    noStroke();
+    textSize(48);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text("Game Over", width / 2, height / 2);
+    pop();
+}
+
 
 /**
  * Drawing the arcade machine
@@ -140,23 +185,24 @@ function drawCoin(coin) {
  */
 function collectCoins() {
     let coinCollected = false;
-
-    // Check every coin in the array
-    for (let coin of coins) {
-        if (player.x === coin.x && player.y === coin.y && !coin.collected) {
-            coin.collected = true;
-            score++;
-            coinCollected = true;
+    if (!gameOver) {
+        // Check every coin in the array
+        for (let coin of coins) {
+            if (player.x === coin.x && player.y === coin.y && !coin.collected) {
+                coin.collected = true;
+                score++;
+                coinCollected = true;
+            }
         }
-    }
 
-    // Add a new coin if one was collected
-    if (coinCollected) {
-        coins.push({
-            x: random([150, 180, 210, 240, 270, 300, 330, 360, 390, 420, 450]),
-            y: random([150, 180, 210, 240, 270, 300]),
-            collected: false
-        });
+        // Add a new coin if one was collected
+        if (coinCollected) {
+            coins.push({
+                x: random([150, 180, 210, 240, 270, 300, 330, 360, 390, 420, 450]),
+                y: random([150, 180, 210, 240, 270, 300]),
+                collected: false
+            });
+        }
     }
 }
 
@@ -164,27 +210,28 @@ function collectCoins() {
  * Moving the spaceship with the keyboard
  */
 function keyPressed() {
+    if (!gameOver) {
+        //Move right(RIGHT_ARROW)
+        if (keyCode === RIGHT_ARROW && player.x < 450) {
+            player.x += tileSize;
+        }
 
-    //Move right(RIGHT_ARROW)
-    if (keyCode === RIGHT_ARROW && player.x < 450) {
-        player.x += tileSize;
+        //Move left(LEFT_ARROW)
+        else if (keyCode === LEFT_ARROW && player.x > 150) {
+            player.x -= tileSize;
+        }
+
+        //Move UP(UP_ARROW)
+        else if (keyCode === UP_ARROW && player.y > 150) {
+            player.y -= tileSize;
+        }
+
+        //Move down(DOWN_ARROW)
+        else if (keyCode === DOWN_ARROW && player.y < 450) {
+            player.y += tileSize;
+        }
+
     }
-
-    //Move left(LEFT_ARROW)
-    else if (keyCode === LEFT_ARROW && player.x > 150) {
-        player.x -= tileSize;
-    }
-
-    //Move UP(UP_ARROW)
-    else if (keyCode === UP_ARROW && player.y > 150) {
-        player.y -= tileSize;
-    }
-
-    //Move down(DOWN_ARROW)
-    else if (keyCode === DOWN_ARROW && player.y < 450) {
-        player.y += tileSize;
-    }
-
 }
 
 /**
