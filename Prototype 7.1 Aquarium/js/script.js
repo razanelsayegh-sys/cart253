@@ -16,11 +16,41 @@
 //c2=100%
 //inter=50%
 var c1, c2;
-//dimensions of the gradient effect
-aquariumGradient(110, 100, 370, 280, c1, c2);
+
 
 //Varibales for the fish and bubbles
-let fish = [];  //creating an array for the fish
+//creating an array for the fishs
+let fishes = [
+
+    //Fish 1
+    {
+        x: 100,
+        y: 220,
+        size: 50,
+        colour: "#F4A261",
+        speed: 1,
+    },
+
+    //Fish 2
+    {
+        x: 250,
+        y: 350,
+        size: 65,
+        colour: "#E76F51",
+        speed: 1.5,
+    },
+
+    //Fish 3
+    {
+        x: 400,
+        y: 200,
+        size: 50,
+        colour: "#FFD166",
+        speed: 2,
+    }
+
+
+];
 let bubbles = []; //creating an array for the bubbles
 
 /**
@@ -60,6 +90,11 @@ function draw() {
 
     //functions called
     drawEnviroment();
+
+    //Draw evry fish in the array
+    for (let fish of fishes) {
+        drawFish(fish);
+    }
 }
 
 function drawEnviroment() {
@@ -107,6 +142,40 @@ function drawEnviroment() {
     ellipse(490, 450, 90, 40);
     pop();
 
+}
+
+/**
+ * Drawing the fish
+ */
+function drawFish(fish) {
+    // fish body
+    push();
+    noStroke();
+    fill(fish.colour);
+    ellipse(fish.x, fish.y, fish.size, fish.size * 0.6);
+    pop();
+
+    // fish tail
+    push();
+    fill(fish.colour);
+    noStroke();
+    triangle(fish.x - fish.size / 4, fish.y, fish.x - fish.size * 0.6, fish.y - 20, fish.x - fish.size * 0.6, fish.y + 20);
+    pop();
+
+    // fish eyes(white part)
+
+    push();
+    fill(255);
+    noStroke();
+    ellipse(fish.x + fish.size / 4 + 1, fish.y - 3, 10, 10);
+    pop();
+
+    // fish eyes(black part)
+    push();
+    fill("#000000");
+    noStroke();
+    ellipse(fish.x + fish.size / 4, fish.y - 3, 3, 3);
+    pop();
 }
 
 /**
