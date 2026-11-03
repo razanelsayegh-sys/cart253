@@ -17,9 +17,9 @@ let balloons = [
     {
         x: 180,
         y: 220,
-        size: 40,
+        size: 50,
         colour: "#E63946",
-        speed: 1
+        visibility: true
     },
 
     //ballon 2
@@ -28,25 +28,71 @@ let balloons = [
         y: 200,
         size: 50,
         colour: "#FFD166",
-        speed: 1.5
+        visibility: true
     },
 
     //ballon 3
     {
-        x: 390,
+        x: 420,
         y: 230,
-        size: 45,
+        size: 55,
         colour: "#4361EE",
-        speed: 2
+        visibility: true
+    },
+
+    //ballon 4
+    {
+        x: 320,
+        y: 270,
+        size: 50,
+        colour: "#ee9e43",
+        visibility: true
     }
 ];
 
+//Game time 
+let gameTime = 10 * 1000;
+
+//Is the game over
+let gameOver = false;
 
 /**
  * Creating canvas
 */
 function setup() {
     createCanvas(600, 500);
+
+}
+
+
+/**
+ * Give the balloons a new random position inside the booth
+    */
+function resetBalloon(balloon) {
+
+    //It changes the ballon position
+    balloon.x = random(160, 440);
+    balloon.y = random(270, 330);
+}
+
+
+/**
+ * function that makes the balloons hide and reappear
+ */
+function hideAndReappear(balloon) {
+
+    //Make the balloon invisible
+    balloon.visibility = false;
+
+    //Wait one second before reappearing
+    setTimeout(function () {
+
+        //Give the ballon a new random position
+        resetBalloon(balloon);
+
+        //Make the balloon visible again
+        balloon.visibility = true;
+    }, 1000);
 }
 
 
@@ -63,8 +109,11 @@ function draw() {
 
     //Draw every Balloon in the array(loop and draws wach balloon automatically)
     for (let balloon of balloons) {
-        drawBalloon(balloon);
-    }
+        if (balloon.visibility) {
+            drawBalloon(balloon);
+        }
+    };
+
 }
 
 
@@ -134,7 +183,26 @@ function drawBalloon(balloon) {
     ellipse(balloon.x, balloon.y, balloon.size, balloon.size * 1.2);
     pop();
 
+}
 
 
 
+/**
+ * Make balloons disappear and reappear when clicked
+ */
+function mousePressed() {
+
+    //check every balloon
+    for (let balloon of balloons) {
+
+        //check if the mouse is close enough to the balloon
+        if (balloon.visibility && dist(mouseX, mouseY, balloon.x, balloon.y) < balloon.size / 2) {
+
+            //Make the balloon disappear and reappear
+            hideAndReappear(balloon);
+
+            //Stop checking 
+            break;
+        }
+    }
 }
