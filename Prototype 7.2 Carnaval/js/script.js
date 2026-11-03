@@ -192,17 +192,18 @@ function drawBalloon(balloon) {
  */
 function mousePressed() {
 
-    //check every balloon
+    let balloonClicked = false;
+
+    // Check every balloon
     for (let balloon of balloons) {
 
-        //check if the mouse is close enough to the balloon
-        if (balloon.visibility && dist(mouseX, mouseY, balloon.x, balloon.y) < balloon.size / 2) {
+        // Check if the mouse is close enough to the balloon
+        if (balloon.visibility && !balloonClicked && dist(mouseX, mouseY, balloon.x, balloon.y) < balloon.size / 2) {
 
-            //Make the balloon disappear and reappear
+            // Make the balloon disappear and reappear
             hideAndReappear(balloon);
 
-            //Stop checking 
-            break;
+            balloonClicked = true;
         }
     }
 }

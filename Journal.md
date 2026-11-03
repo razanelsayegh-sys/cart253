@@ -56,3 +56,13 @@ Each prototype had its own challenges, such as drawing a star and understanding 
 
 Overall, these prototypes challenged me even more than last week's projects and helped me become more comfortable with functions, parameters and interactive coding. </p>
 <img src="Image/Mask example.png" >
+
+
+<h4> 3rd nov 2026 </h4>
+
+<p> Through this week, I found it easy to understand how to use for...of loops to go through an array and access individual objects. I also got more comfortable with understanding how changing a property inside an object can affect what appears on the screen, such as making a balloon or coin disappear without removing it from the array.
+
+In the Arcade prototype, I had a difficulty understanding how to check whether the player was touching a specific coin and how to update its state once it was collected.Eventually with using Boolean values I was able to solve this problem.
+
+Overall, these three prototypes helped me better understand how arrays can be used to manage several objects at once. I also learned that working with arrays involves many different things such as strong objects and that it's important for me to understand what properties should be changed speacially when I'm writting condition. </p>
+<img src="Image/Mask example.png" >
