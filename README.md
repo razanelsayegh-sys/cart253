@@ -19,6 +19,45 @@ Here is a link to my <a href="Journal.md">Journal</a>.
 <h2> New </h2>
 
 
+<!-- Prototype projects nb.6-->
+<h3>Games</h3>
+<p> Projects of November,3rd 2026</p>
+
+<!-- Prototype 1-->
+
+<h5> Aquarium </h5>
+<img src="Image/Aquarium.png" > 
+
+<!-- Project link-->
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 7.1 Aquarium">View this project online</a>
+
+<!-- Script link-->
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 7.1 Aquarium/js/script.js">View the script of this project</a>
+
+<!-- Prototype 2-->
+
+<h5> Carnaval </h5>
+<img src="Image/Carnaval.png" > 
+
+<!-- Project link-->
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 7.2 Carnaval">View this project online</a>
+
+<!-- Script link-->
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 7.2 Carnaval/js/script.js">View the script of this project</a>
+
+
+<!-- Prototype 3-->
+
+<h5> Arcade </h5>
+<img src="Image/Arcade.png" > 
+
+<!-- Project link-->
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 7.3 Arcade">View this project online</a>
+
+<!-- Script link-->
+<a href="https://razanelsayegh-sys.github.io/cart253/Prototype 7.3 Arcade/js/script.js">View the script of this project</a>
+
+
 <!-- Prototype projects nb.5-->
 <h3> Theatre</h3>
 <p> Projects of Octobre 27, 2026</p>
