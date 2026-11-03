@@ -9,6 +9,40 @@
 "use strict";
 
 /**
+ * Variables for the ballons
+ */
+let balloons = [
+
+    //ballon 1
+    {
+        x: 180,
+        y: 220,
+        size: 40,
+        colour: "#E63946",
+        speed: 1
+    },
+
+    //ballon 2
+    {
+        x: 270,
+        y: 200,
+        size: 50,
+        colour: "#FFD166",
+        speed: 1.5
+    },
+
+    //ballon 3
+    {
+        x: 390,
+        y: 230,
+        size: 45,
+        colour: "#4361EE",
+        speed: 2
+    }
+];
+
+
+/**
  * Creating canvas
 */
 function setup() {
@@ -26,6 +60,11 @@ function draw() {
 
     //functions called
     drawBooth();
+
+    //Draw every Balloon in the array(loop and draws wach balloon automatically)
+    for (let balloon of balloons) {
+        drawBalloon(balloon);
+    }
 }
 
 
@@ -74,8 +113,28 @@ function drawBooth() {
     pop();
 
     //Front decoration
+    push();
     fill("#E63946");
     textAlign(CENTER);
     textSize(30);
     text("CARNAVAL", 300, 420);
+    pop();
+}
+
+/**
+ * Drawing the ballons
+ */
+
+function drawBalloon(balloon) {
+
+    //Ballon body
+    push();
+    noStroke();
+    fill(balloon.colour);
+    ellipse(balloon.x, balloon.y, balloon.size, balloon.size * 1.2);
+    pop();
+
+
+
+
 }
