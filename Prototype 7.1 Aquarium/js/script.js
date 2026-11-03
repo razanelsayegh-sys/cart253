@@ -81,7 +81,7 @@ let bubbles = [
 ];
 
 /**
- * Creating the canvas
+ * Creating the canvas& background colour
 */
 function setup() {
 
@@ -125,7 +125,7 @@ function draw() {
         drawFish(fish);
     }
 
-    //Draw every bubble in the array
+    //Draw every bubble in the array(loop)
     for (let bubble of bubbles) {
         moveBubble(bubble);
         drawBubbles(bubble);
