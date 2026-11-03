@@ -13,6 +13,14 @@
 //Size of the game tiles
 const tileSize = 30;
 
+//Player's avater
+let player = {
+    x: 150,
+    y: 150,
+    size: 25,
+    colour: "#87CEEB"
+}
+
 /**
  * Creating canvas
 */
@@ -29,6 +37,7 @@ function draw() {
 
     //Functions called
     drawArcade();
+    drawPlayer();
 }
 
 /**
@@ -70,5 +79,27 @@ function drawArcade() {
     textSize(28);
     textStyle(BOLD);
     text("SPACE COLLECTOR", 250, 525);
+    pop();
+}
+
+/**
+ * Drawing the players avatar
+ */
+function drawPlayer() {
+    push();
+    noStroke();
+
+    // Spaceship body
+    fill(player.colour);
+    triangle(
+        player.x, player.y - player.size,
+        player.x - player.size / 2, player.y + player.size / 2,
+        player.x + player.size / 2, player.y + player.size / 2
+    );
+
+    // Spaceship window
+    fill("#FFFFFF");
+    ellipse(player.x, player.y, 8, 8);
+
     pop();
 }
