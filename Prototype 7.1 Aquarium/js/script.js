@@ -51,7 +51,34 @@ let fishes = [
 
 
 ];
-let bubbles = []; //creating an array for the bubbles
+
+//creating an array for the bubbles
+let bubbles = [
+
+    //Bubble 1
+    {
+        x: 100,
+        y: 400,
+        size: 15,
+        speed: 1,
+    },
+
+    //Bubble 2
+    {
+        x: 300,
+        y: 330,
+        size: 20,
+        speed: 1.5,
+    },
+
+    //Bubble 3
+    {
+        x: 500,
+        y: 320,
+        size: 12,
+        speed: 2,
+    }
+];
 
 /**
  * Creating the canvas
@@ -76,7 +103,7 @@ function setup() {
 function draw() {
 
     //Adding the background colour
-    background("#ffee57");
+    background("#57b1ff");
 
 
     //Dimmenions of the grandiant effect in the aquarium
@@ -93,7 +120,14 @@ function draw() {
 
     //Draw evry fish in the array
     for (let fish of fishes) {
+        moveFish(fish);
         drawFish(fish);
+    }
+
+    //Draw every bubble in the array
+    for (let bubble of bubbles) {
+        moveBubble(bubble);
+        drawBubbles(bubble);
     }
 }
 
@@ -176,6 +210,46 @@ function drawFish(fish) {
     noStroke();
     ellipse(fish.x + fish.size / 4, fish.y - 3, 3, 3);
     pop();
+}
+
+/**
+ * Make the fish move across the screen
+ */
+function moveFish(fish) {
+
+    //Move the fish horisontally
+    fish.x += fish.speed;
+
+    // If the fish goes off the right side of the screen, reset its position to the left side
+    if (fish.x + fish.size / 2 > 590) {    //to check if the fish has left the aquarium position
+        fish.speed = -fish.speed;  //reverse the speed to make the fish move in the opposite direction
+    }
+
+    //if the fish reaches the left side
+    if (fish.x - fish.size / 2 < 10) {
+        fish.speed = -fish.speed;
+    }
+}
+
+/**
+ * Adding the draw bubbles function
+ */
+function drawBubbles(bubble) {
+    push();
+    stroke("#D9F3FF")
+    strokeWeight(2);
+    ellipse(bubble.x, bubble.y, bubble.size);
+    pop();
+}
+
+function moveBubble(bubble) {
+    bubble.y -= bubble.speed;
+
+    //If the bubble reaches the top, bring it back down
+    if (bubble.y + bubble.size / 2 < 120) {
+        bubble.y = 400; //height
+        bubble.x = random(10, 590); //Randomize the x position of the bubble when it resets
+    }
 }
 
 /**
