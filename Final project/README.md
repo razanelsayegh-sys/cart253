@@ -15,6 +15,8 @@ This description should help the reader understand what the program is, anything
 
 This bit should attribute any code, assets or other elements used taken from other sources. 
 > - This project uses [p5.js](https://p5js.org).
+> - Inspiration [Friv](https://www.frivclassic.com/)
+> - [City Lights](https://razanelsayegh-sys.github.io/cart253/Prototype%201.1%20city%20lights/)
 
 
 ## License
