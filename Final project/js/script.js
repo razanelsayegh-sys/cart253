@@ -10,24 +10,43 @@
 "use strict";
 
 /**
- * Creates the canvas and sets up the initial state.
+ * Coordinates of the avatar
+ */
+
+let avatar = {
+    x: 30,
+    y: 310,
+    size: 30,
+    color: 'rgb(191, 234, 107)',
+};
+
+/**
+ * Creating the canvas 
  */
 function setup() {
     createCanvas(1000, 600);
 }
 /**
- * Draw the window and the skyline
+ * Calling the functions in draw
  */
 
 function draw() {
     drawBackground();
+
+    //City buildings
     drawSkyline();
     drawlights();
     drawmoon();
     drawStars();
 
+    //Avatar
+    drawAvatar();
+
 }
 
+/**
+ * Drawing the background of the canvas
+ */
 function drawBackground() {
     background("darkblue");
 }
@@ -80,17 +99,18 @@ function drawlights() {
 
     // lights in the medium height buildings
     //lights medium building 1
-    rect(50, 370, 30, 30);
+    rect(30, 350, 30, 30);
     rect(100, 400, 30, 30);
     //lights medium building 2
     rect(280, 420, 30, 30);
     rect(330, 450, 30, 30);
     //lights medium building 3
-    rect(550, 370, 30, 30);
-    rect(600, 410, 30, 30);
+    rect(535, 350, 30, 30);
+    rect(620, 430, 30, 30);
     //lights medium building 4
-    rect(760, 300, 30, 30);
+    rect(740, 320, 30, 30);
     rect(820, 370, 30, 30);
+    rect(780, 430, 30, 30);
     //lights medium building 5
     rect(940, 370, 30, 30);
     rect(990, 410, 30, 30);
@@ -105,7 +125,7 @@ function drawlights() {
 function drawmoon() {
     // Draw the moon
     push();
-    fill('#fffdfdb6');
+    fill('#fffdfdd7');
     noStroke();
     ellipse(890, 100, 60, 60);
     pop();
@@ -126,5 +146,18 @@ function drawStars() {
     ellipse(550, 90, 5, 5);
     ellipse(600, 150, 5, 5);
     ellipse(700, 100, 5, 5);
+    pop();
+}
+
+
+/**
+ * drawing the avatar
+ */
+function drawAvatar() {
+
+    push();
+    noStroke();
+    fill(avatar.color);
+    ellipse(avatar.x, avatar.y, avatar.size, avatar.size);
     pop();
 }
