@@ -68,7 +68,7 @@ Overall, these three prototypes helped me better understand how arrays can be us
 <img src="Image/Conditional exemple.png" >
 
 
-/*Final project Journal*/
+<!-- *Final project Journal* -->
 <h4> 10 nov 2026 </h4>
 
 <p> For the final project, I got inspired by the online games on the platform Friv, but also by the Chrome Dinosaur Game, particularly it’s endless-running mechanic. My goal is to create a single game that combines continuous running, jumping over obstacles and progressively increasing difficulty. The game takes place across city rooftops, where the player has to navigate between them. I want to gradually change the visual appearance of the environment as the player advances through the game.
