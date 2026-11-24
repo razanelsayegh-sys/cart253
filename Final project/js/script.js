@@ -15,7 +15,7 @@
 
 let avatar = {
     x: 30,
-    y: 315,
+    y: 310,
     size: 30,
     color: 'rgb(191, 234, 107)',
 
@@ -189,7 +189,13 @@ function drawAvatar() {
     push();
     noStroke();
     fill(avatar.color);
-    ellipse(avatar.x, avatar.y, avatar.size, avatar.size);
+
+    //Using sin to add a foalt effect to my avatar
+    let floatOffset = sin(frameCount * 0.05) * 3;
+
+    //Called the variable in the ellipse and added it to the y position of the avatar
+    //to makethe foalt effect move vertically
+    ellipse(avatar.x, avatar.y + floatOffset, avatar.size, avatar.size);
     pop();
 }
 
