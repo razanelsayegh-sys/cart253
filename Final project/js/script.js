@@ -18,7 +18,24 @@ let avatar = {
     y: 310,
     size: 30,
     color: 'rgb(191, 234, 107)',
+
+    //MOUVEMENT VARIABLES
+    velocityY: 0,
+
+    //run variables
+    run: false,
+    Speed: 2.5,
+
+    //jumping variables
+    jump: false,
+    gravity: 0.6,
+    jumpForce: - 12,
+
+    onGround: true,
+
 };
+
+
 
 /**
  * Creating the canvas 
@@ -40,6 +57,7 @@ function draw() {
     drawStars();
 
     //Avatar
+    moveAvatar();
     drawAvatar();
 
 }
@@ -82,7 +100,7 @@ function drawSkyline() {
     fill('#bf9f6c');
     rect(10, 330, 140, 300);
     rect(250, 390, 135, 370);
-    rect(520, 330, 150, 350);
+    rect(480, 330, 170, 350);
     rect(720, 290, 150, 350);
     rect(920, 330, 160, 350);
     pop();
@@ -105,8 +123,8 @@ function drawlights() {
     rect(280, 420, 30, 30);
     rect(330, 450, 30, 30);
     //lights medium building 3
-    rect(535, 350, 30, 30);
-    rect(620, 430, 30, 30);
+    rect(505, 350, 30, 30);
+    rect(600, 430, 30, 30);
     //lights medium building 4
     rect(740, 320, 30, 30);
     rect(820, 370, 30, 30);
@@ -160,4 +178,89 @@ function drawAvatar() {
     fill(avatar.color);
     ellipse(avatar.x, avatar.y, avatar.size, avatar.size);
     pop();
+}
+
+
+/**
+ * Moving the avatar
+ */
+
+function moveAvatar() {
+
+    //Running movement (horizontal movement)
+    if (avatar.run) {
+
+        //
+        avatar.x += avatar.Speed;
+    }
+
+
+    //Jumping movement (upwards movement)
+    if (avatar.jump) {
+        avatar.y += avatar.velocityY;   //move the avatar vertically
+        avatar.velocityY += avatar.gravity;  //to slow the upward movement
+
+
+        //Checking if the avatar is falling
+        if (avatar.velocityY >= 0) {
+
+            //checks whether the avatar has reached the rooftop(y) and the horizontal position(x)
+            //Building 1(medium)
+            if (avatar.x >= 10 && avatar.x <= 150 && avatar.y >= 315) {
+                avatar.y = 315;
+                avatar.velocityY = 0;
+                avatar.jump = false; //allow the player to jump again after landing
+            }
+
+            //Same thing but to each building
+            //Building 2(medium)
+            else if (avatar.x >= 250 && avatar.x <= 385 && avatar.y >= 375) {
+                avatar.y = 375;
+                avatar.velocityY = 0;
+                avatar.jump = false;
+            }
+
+            //Building 3(medium)
+            else if (avatar.x >= 480 && avatar.x <= 650 && avatar.y >= 315) {
+                avatar.y = 315;
+                avatar.velocityY = 0;
+                avatar.jump = false;
+            }
+
+            // Building 4(medium)
+            else if (avatar.x >= 720 && avatar.x <= 870 && avatar.y >= 275) {
+                avatar.y = 275;
+                avatar.velocityY = 0;
+                avatar.jump = false;
+            }
+
+            //Building 5(medium)
+            else if (avatar.x >= 920 && avatar.x <= 1000 && avatar.y >= 315) {
+                avatar.y = 315;
+                avatar.velocityY = 0;
+                avatar.jump = false;
+            }
+        }
+
+    }
+}
+
+
+
+/**
+ * Key function to make the avatar controled by the player
+ * Handel Keypress:
+ * right arrow = RIGHT_ARROW (to go forward)
+ * up arraow = UP_ARROW (to jump)
+ */
+function keyPressed() {
+    if (keyCode === RIGHT_ARROW) {
+        avatar.run = true;
+    }
+
+    else if (keyCode === UP_ARROW && !avatar.jump) {
+        avatar.jump = true;
+        avatar.onGround = false;
+        avatar.velocityY = avatar.jumpForce;
+    }
 }
