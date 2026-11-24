@@ -35,6 +35,9 @@ let avatar = {
 
 };
 
+/**Variable for Game Over message */
+let gameOver = false;
+
 
 
 /**
@@ -43,6 +46,7 @@ let avatar = {
 function setup() {
     createCanvas(1000, 600);
 }
+
 /**
  * Calling the functions in draw
  */
@@ -50,17 +54,26 @@ function setup() {
 function draw() {
     drawBackground();
 
-    //City buildings
+    //City buildings(in order)
     drawSkyline();
     drawlights();
     drawmoon();
     drawStars();
 
-    //Avatar
-    moveAvatar();
-    drawAvatar();
+    //Avatar + Game Over condition to activate
+
+    if (!gameOver) {//if the game isn't over make the avatar move 
+        moveAvatar();
+        checkGameOver();
+        drawAvatar();
+    }
+    else {
+        drawAvatar();
+        drawGameOver();
+    }
 
 }
+
 
 /**
  * Drawing the background of the canvas
@@ -263,4 +276,26 @@ function keyPressed() {
         avatar.onGround = false;
         avatar.velocityY = avatar.jumpForce;
     }
+}
+
+
+
+/**Function to check the game canvas end */
+function checkGameOver() {
+    if (avatar.x > width + avatar.size / 2) {
+        gameOver = true;
+    }
+}
+
+
+/**Game oover function to display the message */
+function drawGameOver() {
+
+    push();
+    fill('white');
+    textAlign(CENTER, CENTER);
+    textStyle(BOLD);
+    textSize(80);
+    text("Game Over", width / 2, height / 2);
+    pop();
 }
