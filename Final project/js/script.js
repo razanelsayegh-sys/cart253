@@ -330,9 +330,22 @@ function keyPressed() {
     }
 }
 
+/**
+ * To stop the avatar from running without pressing the key
+ */
+function keyReleased() {
 
 
-/**Function to check the game canvas end */
+    avatar.run = false;
+
+}
+
+
+
+/**
+ * Function to check the game canvas end 
+ */
+
 function checkGameOver() {
     if (avatar.x > width + avatar.size / 2) {
         gameOver = true;
