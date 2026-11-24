@@ -15,7 +15,7 @@
 
 let avatar = {
     x: 30,
-    y: 310,
+    y: 315,
     size: 30,
     color: 'rgb(191, 234, 107)',
 
@@ -203,13 +203,51 @@ function moveAvatar() {
     //Running movement (horizontal movement)
     if (avatar.run) {
 
-        //
+        //increases the avatar horizontal position by its speed
         avatar.x += avatar.Speed;
     }
 
+    //Checking if the avatar is on a building
+    if (avatar.onGround && !avatar.jump) {
 
-    //Jumping movement (upwards movement)
-    if (avatar.jump) {
+        let onBuilding = false;
+
+        //Building 1
+        if (avatar.y === 315 && avatar.x + 15 > 10 && avatar.x - 15 < 150) {
+            onBuilding = true;
+        }
+
+        //Building 2
+        else if (avatar.y === 375 && avatar.x + 15 > 250 && avatar.x - 15 < 385) {
+            onBuilding = true;
+        }
+
+        //Building 3
+        else if (avatar.y === 315 && avatar.x + 15 > 480 && avatar.x - 15 < 650) {
+            onBuilding = true;
+        }
+
+        //Building 4
+        else if (avatar.y === 275 && avatar.x + 15 > 720 && avatar.x - 15 < 870) {
+            onBuilding = true;
+        }
+
+        //Building 5
+        else if (avatar.y === 315 && avatar.x + 15 > 620 && avatar.x - 15 < 1000) {
+            onBuilding = true;
+        }
+
+        //Checks if the avatar is no longer in the building then the avatar falls
+        if (!onBuilding) {
+            avatar.onGround = false;
+        }
+    }
+
+    //to know the Avatar's previous position before it moved 
+    let previousBottom = avatar.y + avatar.size / 2
+
+    //Jumping movement (upwards movement) and falling movement
+    if (avatar.jump || !avatar.onGround) {
         avatar.y += avatar.velocityY;   //move the avatar vertically
         avatar.velocityY += avatar.gravity;  //to slow the upward movement
 
@@ -217,41 +255,49 @@ function moveAvatar() {
         //Checking if the avatar is falling
         if (avatar.velocityY >= 0) {
 
-            //checks whether the avatar has reached the rooftop(y) and the horizontal position(x)
+            //Calculate the current bottom edge of the avatar after moving vertically
+            let currentBottom = avatar.y + avatar.size / 2;
+
+            //checks whether the avatar has reached the rooftop(x) and if the avatar is falling through the rooftop(y)
             //Building 1(medium)
-            if (avatar.x >= 10 && avatar.x <= 150 && avatar.y >= 315) {
+            if (avatar.x >= 10 && avatar.x - 15 <= 150 && previousBottom <= 330 && currentBottom >= 330) {
                 avatar.y = 315;
                 avatar.velocityY = 0;
                 avatar.jump = false; //allow the player to jump again after landing
+                avatar.onGround = true; //to dectect when the avatar isn,t on the building
             }
 
             //Same thing but to each building
             //Building 2(medium)
-            else if (avatar.x >= 250 && avatar.x <= 385 && avatar.y >= 375) {
+            else if (avatar.x >= 250 && avatar.x - 15 <= 385 && previousBottom <= 390 && currentBottom >= 390) {
                 avatar.y = 375;
                 avatar.velocityY = 0;
                 avatar.jump = false;
+                avatar.onGround = true;
             }
 
             //Building 3(medium)
-            else if (avatar.x >= 480 && avatar.x <= 650 && avatar.y >= 315) {
+            else if (avatar.x >= 480 && avatar.x - 15 <= 650 && previousBottom <= 330 && currentBottom >= 330) {
                 avatar.y = 315;
                 avatar.velocityY = 0;
                 avatar.jump = false;
+                avatar.onGround = true;
             }
 
             // Building 4(medium)
-            else if (avatar.x >= 720 && avatar.x <= 870 && avatar.y >= 275) {
+            else if (avatar.x >= 720 && avatar.x - 15 <= 870 && previousBottom <= 290 && currentBottom >= 290) {
                 avatar.y = 275;
                 avatar.velocityY = 0;
                 avatar.jump = false;
+                avatar.onGround = true;
             }
 
             //Building 5(medium)
-            else if (avatar.x >= 920 && avatar.x <= 1000 && avatar.y >= 315) {
+            else if (avatar.x >= 920 && avatar.x - 15 <= 1000 && previousBottom <= 330 && currentBottom >= 330) {
                 avatar.y = 315;
                 avatar.velocityY = 0;
                 avatar.jump = false;
+                avatar.onGround = true;
             }
         }
 
@@ -283,6 +329,11 @@ function keyPressed() {
 /**Function to check the game canvas end */
 function checkGameOver() {
     if (avatar.x > width + avatar.size / 2) {
+        gameOver = true;
+    }
+
+    //Checking if the avatar falls below the canvas
+    else if (avatar.y - avatar.size / 2 > height) {
         gameOver = true;
     }
 }
