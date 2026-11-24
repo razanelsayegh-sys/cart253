@@ -291,11 +291,20 @@ function checkGameOver() {
 /**Game oover function to display the message */
 function drawGameOver() {
 
+
     push();
+
+    //Transparent background
+    noStroke();
+    fill(0, 0, 0, 150);
+    rect(0, 0, width, height);
+
+    //the text variables
     fill('white');
     textAlign(CENTER, CENTER);
     textStyle(BOLD);
     textSize(80);
     text("Game Over", width / 2, height / 2);
+
     pop();
 }
