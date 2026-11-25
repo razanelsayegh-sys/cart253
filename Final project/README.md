@@ -17,6 +17,7 @@ This bit should attribute any code, assets or other elements used taken from oth
 > - This project uses [p5.js](https://p5js.org).
 > - Inspiration [Friv](https://www.frivclassic.com/)
 > - [City Lights](https://razanelsayegh-sys.github.io/cart253/Prototype%201.1%20city%20lights/)
+> - Used the teachers example for the buildings loop [Bug Squasher](https://editor.p5js.org/pippinbarr/sketches/cU8ZR2yv5)
 
 
 ## License
