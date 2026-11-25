@@ -111,19 +111,19 @@ function drawSkyline() {
     push();
     noStroke();
     fill('#462e2e');
-    rect(170, 410, 80, 190);
-    rect(440, 430, 80, 170);
-    rect(670, 420, 50, 180);
-    rect(870, 445, 55, 155);
+    rect(170, 410, 90, 190);
+    rect(440, 430, 100, 170);
+    rect(670, 420, 90, 180);
+    rect(870, 445, 105, 155);
     pop();
 
     // Draw the city buildings(short height)
     push();
     noStroke();
     fill('#372020');
-    rect(150, 500, 80, 100);
+    rect(100, 500, 120, 100);
     rect(380, 450, 80, 160);
-    rect(650, 500, 80, 100);
+    rect(620, 500, 90, 100);
     pop();
 
     // Draw the city buildings(medium height) 
@@ -315,7 +315,6 @@ function keyReleased() {
     avatar.run = false;
 
 }
-
 
 
 /**
