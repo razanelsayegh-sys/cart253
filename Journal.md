@@ -1,6 +1,6 @@
 <h2> <strong> Reflective Journal</strong> </h2>
 
-
+<br>
 <h4> 13 sept 2026 </h4>
 
 <p> During this assignment, I learned a lot of things like creating different types of Markdown elements such as paragraphs, headings, and images. Markdown helped me remember how to do different things and I also got used to working with VS Code and GitHub and understanding how they function together. I learned how to resize an image and make it fit properly on my website. What I enjoyed most was experimenting and figuring things out by myself, especially learning how to include an image and add a link to my own work. Even though it was hard at first to understand the code that must be written for it to appear correctly on my website, eventually I got the hang of it. During the first days, understanding VS Code and how to write some code like the image one took me a lot of time. I added an image of my own work from my last semester at Cégep.  I hope in the future, people who visit my website will not just get to enjoy my projects but also get to know who I am through them. I want them to see my evolution and improvement in each project I create, while still recognizing my identity and artistic voice.</p>
@@ -9,7 +9,7 @@
 
 ![Website screenshot](./Image/Website%20screenshot.png) 
 
-
+<br>
 <h4> 21 sept 2026 </h4>
 
 <p> This week, I created three small prototypes using p5.js, and each one taught me something different about drawing with code. At first, it was hard to understand how to start and where to start, but once I began experimenting with basic shapes and colors, everything became easier to manipulate. 
@@ -19,7 +19,7 @@ The first prototype, City light, helped me manipulate different functions and ge
 Overall, I learned a lot from this prototype.I'm really intrested in developing animation next, like making shapes move or react. I hope someone looking at my work sees how each piece explores a diffrent idea. Here is an example of the animation, that I would like to do taken from p5.js refrence website: </p>
 <img src="Image/Animation example.png" >
 
-
+<br>
 <h4> 28 sept 2026 </h4>
 
 <p> These prototypes were the most challenging project I've made so far, mainly because of the animation part. I had many ideas at first, but some were too complex to code, so I chose to go with simpler drawings in order to focus on exploring the animation part of this week properly and not overwhelm myself.
@@ -29,7 +29,7 @@ Even thought I struggled at the beginning, each prototype taught me something ne
 Overall, these prototypes helped me get more comfortable using variables, timing and interaction to create motion in my drawings, and they gave me more confidence to try new ideas in the future prototypes. </p>
 <img src="Image/The Shower.png" >
 
-
+<br>
 <h4> 9 oct 2026 </h4>
 
 <p> Across all three prototypes, I learned how conditionals can be created adding a movement effect to the drawing. Each drawing reacts diffrently depending on the viwer interaction, for example the jellyfish appears when the mouse is on it like a memory, the fish changes behavior as it travels home. I was surprised to see how an image can be animated but also could be modifided, made transparent, bigger or smaller using simple code.
@@ -39,6 +39,7 @@ In each prototype, the hardest part was adding the photo and figuring out where 
 Overall, these prototypes helped me understand how a code can express an emotion and a narative, not just a movement such as the last drawing "Fish going home". </p>
 <img src="Image/Jellyfish.png" >
 
+<br>
 <h4> 18 oct 2026 </h4>
 
 <p> Throughout this week, I became more comfortable organizing my code into objects and functions, and developed a better understanding of how certain functions work. Debugging my work by checking the code carefully and looking for spelling mistakes or placement mistakes also became easier.
@@ -48,6 +49,7 @@ In the first prototype, I found it difficult to understand how to use one mouseP
 Overall, these prototypes helped me explore how events can be triggered in different ways by user interaction, by time, or by an object's position. </p>
 <img src="Image/exemple .png" >
 
+<br>
 <h4> 26 oct 2026 </h4>
 
 <p> This week, I became more familiar with calling functions to perform specific tasks. I practised using parameters to reuse the same function for different objects, such as drawMask(mask) and restMask(mask), in the last project. I also tried to organise my code into sections, with comments that explain the purpose of variables and functions, as well as more difficult parts of the code.
@@ -57,7 +59,7 @@ Each prototype had its own challenges, such as drawing a star and understanding 
 Overall, these prototypes challenged me even more than last week's projects and helped me become more comfortable with functions, parameters and interactive coding. </p>
 <img src="Image/Mask example.png" >
 
-
+<br>
 <h4> 3rd nov 2026 </h4>
 
 <p> Through this week, I found it easy to understand how to use for...of loops to go through an array and access individual objects. I also got more comfortable with understanding how changing a property inside an object can affect what appears on the screen, such as making a balloon or coin disappear without removing it from the array.
@@ -67,7 +69,7 @@ In the Arcade prototype, I had a difficulty understanding how to check whether t
 Overall, these three prototypes helped me better understand how arrays can be used to manage several objects at once. I also learned that working with arrays involves many different things such as strong objects and that it's important for me to understand what properties should be changed speacially when I'm writting condition. </p>
 <img src="Image/Conditional exemple.png" >
 
-
+<br>
 <!-- *Final project Journal* -->
 <h4> 10 nov 2026 </h4>
 
@@ -75,5 +77,16 @@ Overall, these three prototypes helped me better understand how arrays can be us
 
 I had difficulties understanding how to control the avatar's horizontal and vertical movements, especially when landing on building's of diffrent heights. Eventually, I understood which variables, I needed to use and came up with the idea of creating a condition for each building’s height. My main difficulty was finding an idea that was interesting enough to develop as a final project. In my opinion, I don't think it is interesting yet, but it's a good starting point. In this week's code I used Boolean variables to control the game state and the avatar's movement. For the Game Over animation, I usually would use a timer to display the message when time runs out. However, for this project, I programmed the message to appear when the avatar is outside of the canvas.
 
-For the second week, I want to improve the avatar's landing and movement between buildings. I also want to make the avatar move forward only when the player presses the right arrow key, so when the key is released, the avatar stops moving. Additionally, I want to make the background gradually change from night to morning after a certain amount of playing time. I also plan to add obstacles that the player must avoid. Another idea is to create a countinous scrolling loop for the buildings making the game fell more animated, complex and giving the impression that the avatar is constantly moving forward. Finally, I want to implement collision detection between the avatar and the obstacles, as well as a condition that ends the game if the avatar falls from the building. </p>
+For the second week, I want to improve the avatar's landing and movement between buildings. I also want to make the avatar move forward only when the player presses the right arrow key, so when the key is released, the avatar stops moving. Additionally, I want to make the background gradually change after a certain amount of playing time. I also plan to add obstacles that the player must avoid. Another idea is to create a countinous scrolling loop for the buildings making the game feel more animated, complex and giving the impression that the avatar is constantly moving forward. Finally, I want to implement collision detection between the avatar and the obstacles, as well as a condition that ends the game if the avatar falls from the building. </p>
 <img src="Image/fianle project journal1.png" >
+
+<br>
+<h4> 24 nov 2026 </h4>
+
+<p> This week, I continued working on the avatar's movement, especially the jumping, landing and falling mechanics part as they weren't properly corrdinated. I also started adjusting the collision conditions to work with the moving buildings.
+
+Last week, I created conditions based on each building's x-position and height. However, these conditions were programmed to check specific coordinates, which no longer worked once I started moving the buildings using an array and a loop. To fix this, I changed the collision conditions to use a loop that checks the current position of every building as it moves. I also encountered a problem where the windows wouldn't move along with their respective buildings. I eventually added the windows' positions to each building's object in the array and adjusted the building-drawing function to use those positions. This allowed the windos to move together with the buildings. Another thing I added a keyReleased() function so that the avatar would only run while the player presses the movement key, rather than continuing to move after the key was pressed. 
+
+Through this process, I gained a better understanding of how arrays can store multiple objects with their own properties. I also became more comfortable with debbuging my code and understanding how diffrent functions interact with one another.
+
+For this week, I still need to add the obstacles and make the backgorund scenery change after a certain amount of time. I'm also not sure if I will keep the key released function. When testing the game, I found that having to hold down the movement key to go forward made it much more challenging to control the avatar and to make it jump correctly. I think I will bring back the  inital movement system, where the avatar would automaticaly starts moving horizontaly after a single key press, as it makes the gameplay easier to control. </p>
