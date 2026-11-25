@@ -73,9 +73,8 @@ function draw() {
     drawBackground();
 
     //City buildings(in order)
-    moveBuildings();
     drawSkyline();
-    // drawLights();
+    moveBuildings();
     drawMoon();
     drawStars();
 
@@ -181,36 +180,7 @@ function moveBuildings() {
 
 }
 
-// /**
 //  * Drawing the house windwos
-//  */
-// function drawLights() {
-//     // Draw the lights in the buildings
-//     push();
-//     noStroke();
-//     fill('#fae96d');
-
-//     // lights in the medium height buildings
-//     //lights medium building 1
-//     rect(30, 350, 30, 30);
-//     rect(100, 400, 30, 30);
-//     //lights medium building 2
-//     rect(280, 420, 30, 30);
-//     rect(330, 450, 30, 30);
-//     //lights medium building 3
-//     rect(505, 350, 30, 30);
-//     rect(600, 430, 30, 30);
-//     //lights medium building 4
-//     rect(740, 320, 30, 30);
-//     rect(820, 370, 30, 30);
-//     rect(780, 430, 30, 30);
-//     //lights medium building 5
-//     rect(940, 370, 30, 30);
-//     rect(990, 410, 30, 30);
-//     pop();
-
-
-// }
 
 /**
  * Drawing the moon
@@ -268,45 +238,25 @@ function drawAvatar() {
 
 function moveAvatar() {
 
-    //Running movement (horizontal movement)
-    if (avatar.run) {
-
-        //increases the avatar horizontal position by its speed
-        avatar.x += avatar.Speed;
-    }
-
-    //Checking if the avatar is on a building
+    //Running movement to check if the avatar is Jumping and on the building roof 
+    //using a loop
     if (avatar.onGround && !avatar.jump) {
 
-        let onBuilding = false;
+        //Variable roof building
+        let onRoof = false;
 
-        //Building 1
-        if (avatar.y === 315 && avatar.x + 15 > 10 && avatar.x - 15 < 150) {
-            onBuilding = true;
-        }
+        for (let building of buildings) {
 
-        //Building 2
-        else if (avatar.y === 375 && avatar.x + 15 > 250 && avatar.x - 15 < 385) {
-            onBuilding = true;
-        }
-
-        //Building 3
-        else if (avatar.y === 315 && avatar.x + 15 > 480 && avatar.x - 15 < 650) {
-            onBuilding = true;
-        }
-
-        //Building 4
-        else if (avatar.y === 275 && avatar.x + 15 > 720 && avatar.x - 15 < 870) {
-            onBuilding = true;
-        }
-
-        //Building 5
-        else if (avatar.y === 315 && avatar.x + 15 > 620 && avatar.x - 15 < 1000) {
-            onBuilding = true;
+            if (avatar.y === building.y - avatar.size / 2 &&
+                //building.x adjusts the building position according to the buildings movement
+                avatar.x + avatar.size / 2 > building.x &&
+                avatar.x - avatar.size / 2 < building.x + building.w) {
+                onRoof = true;
+            }
         }
 
         //Checks if the avatar is no longer in the building then the avatar falls
-        if (!onBuilding) {
+        if (!onRoof) {
             avatar.onGround = false;
         }
     }
@@ -314,62 +264,29 @@ function moveAvatar() {
     //to know the Avatar's previous position before it moved 
     let previousBottom = avatar.y + avatar.size / 2
 
-    //Jumping movement (upwards movement) and falling movement
-    if (avatar.jump || !avatar.onGround) {
-        avatar.y += avatar.velocityY;   //move the avatar vertically
-        avatar.velocityY += avatar.gravity;  //to slow the upward movement
+    //Apply gravity and move the avatar
+    avatar.velocityY += avatar.gravity;
+    avatar.y += avatar.velocityY;
 
+    //Varaible for the bottom of the canvas
+    let currentBottom = avatar.y + avatar.size / 2;
 
-        //Checking if the avatar is falling
-        if (avatar.velocityY >= 0) {
+    //Checking if the avatar is falling
+    for (let building of buildings) {
+        if (avatar.x + avatar.size / 2 > building.x &&
+            avatar.x - avatar.size / 2 < building.x + building.w &&
+            previousBottom <= building.y &&
+            currentBottom >= building.y) {
 
-            //Calculate the current bottom edge of the avatar after moving vertically
-            let currentBottom = avatar.y + avatar.size / 2;
+            avatar.y = building.y - avatar.size / 2;
+            avatar.velocityY = 0;
+            avatar.jump = false;
+            avatar.onGround = true;
 
-            //checks whether the avatar has reached the rooftop(x) and if the avatar is falling through the rooftop(y)
-            //Building 1(medium)
-            if (avatar.x >= 10 && avatar.x - 15 <= 150 && previousBottom <= 330 && currentBottom >= 330) {
-                avatar.y = 315;
-                avatar.velocityY = 0;
-                avatar.jump = false; //allow the player to jump again after landing
-                avatar.onGround = true; //to dectect when the avatar isn,t on the building
-            }
-
-            //Same thing but to each building
-            //Building 2(medium)
-            else if (avatar.x >= 250 && avatar.x - 15 <= 385 && previousBottom <= 390 && currentBottom >= 390) {
-                avatar.y = 375;
-                avatar.velocityY = 0;
-                avatar.jump = false;
-                avatar.onGround = true;
-            }
-
-            //Building 3(medium)
-            else if (avatar.x >= 480 && avatar.x - 15 <= 650 && previousBottom <= 330 && currentBottom >= 330) {
-                avatar.y = 315;
-                avatar.velocityY = 0;
-                avatar.jump = false;
-                avatar.onGround = true;
-            }
-
-            // Building 4(medium)
-            else if (avatar.x >= 720 && avatar.x - 15 <= 870 && previousBottom <= 290 && currentBottom >= 290) {
-                avatar.y = 275;
-                avatar.velocityY = 0;
-                avatar.jump = false;
-                avatar.onGround = true;
-            }
-
-            //Building 5(medium)
-            else if (avatar.x >= 920 && avatar.x - 15 <= 1000 && previousBottom <= 330 && currentBottom >= 330) {
-                avatar.y = 315;
-                avatar.velocityY = 0;
-                avatar.jump = false;
-                avatar.onGround = true;
-            }
         }
 
     }
+
 }
 
 
