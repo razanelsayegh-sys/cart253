@@ -38,6 +38,24 @@ let avatar = {
 /**Variable for Game Over message */
 let gameOver = false;
 
+let buildingSpeed = 3.5
+
+let buildings = [
+    /**Buildings array */
+    //Building 1
+    { x: 10, y: 330, w: 140, h: 300, Wd: [{ x: 20, y: 20 }, { x: 90, y: 70 }] },
+    //Building 2
+    { x: 250, y: 390, w: 135, h: 370, Wd: [{ x: 30, y: 30 }, { x: 80, y: 60 }] },
+    //Building 3 
+    { x: 480, y: 330, w: 170, h: 350, Wd: [{ x: 25, y: 20 }, { x: 120, y: 100 }] },
+    //Building 4
+    { x: 720, y: 290, w: 150, h: 350, Wd: [{ x: 20, y: 30 }, { x: 100, y: 80 }, { x: 60, y: 140 }] },
+    //Building 5
+    { x: 920, y: 330, w: 160, h: 350, Wd: [{ x: 20, y: 40 }, { x: 70, y: 80 }] }
+];
+
+
+
 
 
 /**
@@ -55,9 +73,10 @@ function draw() {
     drawBackground();
 
     //City buildings(in order)
+    moveBuildings();
     drawSkyline();
-    drawlights();
-    drawmoon();
+    // drawLights();
+    drawMoon();
     drawStars();
 
     //Avatar + Game Over condition to activate
@@ -66,6 +85,7 @@ function draw() {
         moveAvatar();
         checkGameOver();
         drawAvatar();
+
     }
     else {
         drawAvatar();
@@ -107,53 +127,95 @@ function drawSkyline() {
     rect(650, 500, 80, 100);
     pop();
 
-    // Draw the city buildings(medium height)
+    // Draw the city buildings(medium height) 
+    //Using loop/Arrays
     push();
     noStroke();
-    fill('#bf9f6c');
-    rect(10, 330, 140, 300);
-    rect(250, 390, 135, 370);
-    rect(480, 330, 170, 350);
-    rect(720, 290, 150, 350);
-    rect(920, 330, 160, 350);
+
+    //Repeats this for every building that is stored in the array variable
+    for (let building of buildings) {
+
+        //Drawing the building
+        fill('#bf9f6c');
+        rect(building.x, building.y, building.w, building.h);
+
+        //Drawing the windows
+        fill('#fae96d');
+        for (let window of building.Wd) {
+            rect(building.x + window.x, building.y + window.y, 30, 30);
+        }
+    }
+
+
     pop();
 }
 
 /**
- * Drawing the house windos
+ * Moving the buildings(loop)
  */
-function drawlights() {
-    // Draw the lights in the buildings
-    push();
-    noStroke();
-    fill('#fae96d');
+function moveBuildings() {
 
-    // lights in the medium height buildings
-    //lights medium building 1
-    rect(30, 350, 30, 30);
-    rect(100, 400, 30, 30);
-    //lights medium building 2
-    rect(280, 420, 30, 30);
-    rect(330, 450, 30, 30);
-    //lights medium building 3
-    rect(505, 350, 30, 30);
-    rect(600, 430, 30, 30);
-    //lights medium building 4
-    rect(740, 320, 30, 30);
-    rect(820, 370, 30, 30);
-    rect(780, 430, 30, 30);
-    //lights medium building 5
-    rect(940, 370, 30, 30);
-    rect(990, 410, 30, 30);
-    pop();
+    //Moving the buildings to the left
+    if (avatar.run) {
+        for (let building of buildings) {
+            building.x -= buildingSpeed;
+        }
+    }
 
+    //Checking if the building has left the canvas
+    for (let building of buildings) {
+        if (building.x + building.w < 0) {
+            let rightEdge = 0;
+
+            //Finding the last building on the right
+            for (let otherBuilding of buildings) {
+                if (otherBuilding.x + otherBuilding.w > rightEdge) {
+                    rightEdge = otherBuilding.x + otherBuilding.w;
+                }
+            }
+
+            //Moving the building to the right
+            building.x = rightEdge + 70;
+        }
+    }
 
 }
+
+// /**
+//  * Drawing the house windwos
+//  */
+// function drawLights() {
+//     // Draw the lights in the buildings
+//     push();
+//     noStroke();
+//     fill('#fae96d');
+
+//     // lights in the medium height buildings
+//     //lights medium building 1
+//     rect(30, 350, 30, 30);
+//     rect(100, 400, 30, 30);
+//     //lights medium building 2
+//     rect(280, 420, 30, 30);
+//     rect(330, 450, 30, 30);
+//     //lights medium building 3
+//     rect(505, 350, 30, 30);
+//     rect(600, 430, 30, 30);
+//     //lights medium building 4
+//     rect(740, 320, 30, 30);
+//     rect(820, 370, 30, 30);
+//     rect(780, 430, 30, 30);
+//     //lights medium building 5
+//     rect(940, 370, 30, 30);
+//     rect(990, 410, 30, 30);
+//     pop();
+
+
+// }
 
 /**
  * Drawing the moon
  */
-function drawmoon() {
+function drawMoon() {
     // Draw the moon
     push();
     fill('#fffdfdd7');
@@ -334,8 +396,6 @@ function keyPressed() {
  * To stop the avatar from running without pressing the key
  */
 function keyReleased() {
-
-
     avatar.run = false;
 
 }
