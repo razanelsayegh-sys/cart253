@@ -180,7 +180,6 @@ function moveBuildings() {
 
 }
 
-//  * Drawing the house windwos
 
 /**
  * Drawing the moon
